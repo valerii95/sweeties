@@ -26,4 +26,6 @@ export default {};
 <style lang="sass" scoped>
     .navbar 
         font-family: "Montserrat"
+        position: relative
+        z-index: 2
 </style>

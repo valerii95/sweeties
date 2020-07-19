@@ -3,11 +3,12 @@
 </template>
 
 <script>
+
 export default {
   name: 'ParticlesJS',
 
   mounted () {
-    require('particles.js')
+    require('@/assets/plugins/particles.js')
     this.$nextTick(() => {
       this.initParticlesJS()
     })
@@ -28,19 +29,22 @@ export default {
       "value": "#ffffff"
     },
     "shape": {
-      "type": "image",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": 
-        {
-        "src": require('../assets/img/header/strawberry.png'),
-        },
-    },
+            "type": ["image", "image2", "image3"],
+            "random": true,
+            // "type": "image",
+            "polygon": {
+              "nb_sides": 4
+            },
+            "image": {
+              "src": require('../assets/img/header/strawberry.png')
+            },
+            "image2": {
+              "src": require('../assets/img/header/strawberry1.png')
+            },
+            "image3": {
+              "src": require('../assets/img/header/strawberry2.png')
+            },
+          },
     "opacity": {
       "value": 1,
       "random": false,

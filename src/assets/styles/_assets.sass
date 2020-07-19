@@ -1,0 +1,18 @@
+// I use here sass map from bootstrap (maps.scss) - $sizes and $grid-breakpoints
+@each $screen, $proportion in $grid-breakpoints
+  // Don't generate anything for 'xs' size.
+  @if($screen == 'xs')
+    null
+  @else
+    @media (min-width: #{$proportion})
+      // Generate classes: w-(sm-xl)-(25-100) [from .w-sm-25 to .w-xl-100]
+      @each $size, $width in $sizes
+        .w-#{$screen}-#{$size}
+          width: $width !important
+
+.angle-right
+  border-bottom-right-radius: 0px !important
+
+.btn-primary
+  // box-shadow: -2px 3px 8px 1px rgba($green, 0.75)
+  box-shadow: 0 4px 8px rgba($green, .75)

@@ -1,47 +1,54 @@
 <template>
-    <header>
-        <div class="container">
-            <Navbar />
-            <div class="row align-items-center">
-                <article class="col-6 index-1">
-                    <h1 class="blur">Vegan Deserts</h1>
-                    <p class="blur blur-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button class="btn btn-primary mt-lg-4 angle-right">Go to catalog</button>
-                </article>
-                <div class="col-6 index-1">
-                    <img class="img img-fluid" src="../assets/img/header/cake.png" alt />
-                </div>
-            </div>
+  <header>
+    <div class="container">
+      <Navbar />
+      <div class="row align-items-center">
+        <article class="col-auto mr-auto index-1 blur">
+          <h1 class="title">Vegan Deserts</h1>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button class="btn btn-primary mt-lg-4 angle-right">Go to catalog</button>
+        </article>
+        <div class="col-6 index-1">
+          <img class="img img-fluid" src="../assets/img/header/cake.png" alt />
         </div>
-        <div class="circle bg-success"></div>
-        <Particles />
-    </header>
+      </div>
+    </div>
+    <div class="circle bg-success"></div>
+    <Particles />
+  </header>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
-import Particles from "@/components/Particles";
-
-export default {
+  import Navbar from "@/components/Navbar";
+  import Particles from "@/components/Particles";
+  
+  export default {
     name: "Headers",
     components: {
-        Navbar,
-        Particles
+      Navbar,
+      Particles
     }
-};
+  };
 </script>
 
 <style lang="sass" scoped>
-header 
-    position: relative
-    overflow: hidden
-    min-height: 100vh
-    h1
-        position: relative
-        display: inline-block
-        margin-bottom: 3.5rem
-
-.circle 
+.blur
+  background-color: rgba(white, .4)
+  backdrop-filter: blur(2px)
+  border-radius: 5px
+header
+  position: relative
+  overflow: hidden
+  min-height: 100vh
+  article
+    .title
+      position: relative
+      display: inline-block
+      margin-bottom: 3.5rem
+    .text
+      @media(min-width: 1200px)
+        max-width: 430px
+  .circle
     position: absolute
     top: -100%
     right: -50%
@@ -49,15 +56,4 @@ header
     height: 195%
     border-radius: 50%
     z-index: -1
-
-.index-1
-    z-index: 1
-
-.blur
-    background-color: rgba(white, .4)
-    backdrop-filter: blur(2px)
-    border-radius: 5px
-    &-text
-        @media(min-width: 1200px)
-            max-width: 430px
 </style>

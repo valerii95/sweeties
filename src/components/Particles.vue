@@ -6,7 +6,32 @@
 
 export default {
   name: 'ParticlesJS',
-
+  props: {
+    quantity: {
+      default: 5,
+      type: Number
+    },
+    images: {
+      default: () => ['header/strawberry.png', 'header/strawberry1.png', 'header/strawberry2.png'],
+      type: Array
+    },
+    onHover: {
+      default: false,
+      type: Boolean
+    },
+    onHoverEvent: {
+      default: 'repulse',
+      type: String
+    },
+    onClick: {
+      default: false,
+      type: Boolean
+    },
+    onClickEvent: {
+      default: 'push',
+      type: String
+    }
+  },
   mounted () {
     require('@/assets/plugins/particles.js')
     this.$nextTick(() => {
@@ -18,103 +43,105 @@ export default {
     initParticlesJS () {
       particlesJS('particles-js', {
         "particles": {
-    "number": {
-      "value": 7,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
+          "number": {
+            "value": this.quantity,
+            "density": {
+              "enable": false,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#ffffff"
+          },
+          "shape": {
             "type": ["image", "image2", "image3"],
-            "random": true,
-            // "type": "image",
+            "random": false,
             "polygon": {
-              "nb_sides": 4
+              "nb_sides": 3
             },
             "image": {
-              "src": require('../assets/img/header/strawberry.png')
+              "src": require(`../assets/img/${this.images[0] || ''}`)
+              // "src": require('../assets/img/header/strawberry.png')
             },
             "image2": {
-              "src": require('../assets/img/header/strawberry1.png')
+              "src": require(`../assets/img/${this.images[1] || ''}`)
+              // "src": require('../assets/img/header/strawberry1.png')
             },
             "image3": {
-              "src": require('../assets/img/header/strawberry2.png')
+              "src": require(`../assets/img/${this.images[2] || ''}`)
+              // "src": require('../assets/img/header/strawberry2.png')
             },
           },
-    "opacity": {
-      "value": 1,
-      "random": false,
-    },
-    "size": {
-      "value": 50,
-      "random": false,
-      
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 1,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": true,
-        "rotateX": 600,
-        "rotateY": 600
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "resize": false
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 30,
-        "size": 75,
-        "opacity": 0,
-        "speed": 1
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
+          "opacity": {
+            "value": 1,
+            "random": false,
+          },
+          "size": {
+            "value": 50,
+            "random": false,
+            
+          },
+          "line_linked": {
+            "enable": false,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1,
+            "direction": "none",
+            "random": true,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 600
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": this.onHover,
+              "mode": this.onHoverEvent
+            },
+            "onclick": {
+              "enable": this.onClick,
+              "mode": this.onClickEvent
+            },
+            "resize": false
+          },
+          "modes": {
+            "grab": {
+              "distance": 400,
+              "line_linked": {
+                "opacity": 1
+              }
+            },
+            "bubble": {
+              "distance": 30,
+              "size": 75,
+              "opacity": 0,
+              "speed": 1
+            },
+            "repulse": {
+              "distance": 200,
+              "duration": 0.4
+            },
+            "push": {
+              "particles_nb": 4
+            },
+            "remove": {
+              "particles_nb": 2
+            }
+          }
+        },
+        "retina_detect": true
       })
     }
   }

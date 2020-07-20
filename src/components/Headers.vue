@@ -14,28 +14,24 @@
       </div>
     </div>
     <div class="circle bg-success"></div>
-    <Particles />
+    <ParticlesHeader componentId="particle-header"/>
   </header>
 </template>
 
 <script>
   import Navbar from "@/components/Navbar";
-  import Particles from "@/components/Particles";
+  import ParticlesHeader from "@/components/ParticlesHeader";
   
   export default {
     name: "Headers",
     components: {
       Navbar,
-      Particles
+      ParticlesHeader
     }
   };
 </script>
 
 <style lang="sass" scoped>
-.blur
-  background-color: rgba(white, .4)
-  backdrop-filter: blur(2px)
-  border-radius: 5px
 header
   position: relative
   overflow: hidden

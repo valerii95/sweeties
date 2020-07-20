@@ -1,5 +1,5 @@
 <template>
-  <div id='particles-js'></div>
+  <div :id="componentId" class="particles"></div>
 </template>
 
 <script>
@@ -7,6 +7,10 @@
 export default {
   name: 'ParticlesJS',
   props: {
+    componentId: {
+      default: 'particles-js',
+      type: String
+    },
     quantity: {
       default: 5,
       type: Number
@@ -30,6 +34,10 @@ export default {
     onClickEvent: {
       default: 'push',
       type: String
+    },
+    randomSize: {
+      default: false,
+      type: Boolean
     }
   },
   mounted () {
@@ -41,7 +49,7 @@ export default {
 
   methods: {
     initParticlesJS () {
-      particlesJS('particles-js', {
+      particlesJS(this.componentId, {
         "particles": {
           "number": {
             "value": this.quantity,
@@ -60,16 +68,13 @@ export default {
               "nb_sides": 3
             },
             "image": {
-              "src": require(`../assets/img/${this.images[0] || ''}`)
-              // "src": require('../assets/img/header/strawberry.png')
+              "src": require(`../assets/img/${this.images[0] || ''}`),
             },
             "image2": {
-              "src": require(`../assets/img/${this.images[1] || ''}`)
-              // "src": require('../assets/img/header/strawberry1.png')
+              "src": require(`../assets/img/${this.images[1] || ''}`),
             },
             "image3": {
-              "src": require(`../assets/img/${this.images[2] || ''}`)
-              // "src": require('../assets/img/header/strawberry2.png')
+              "src": require(`../assets/img/${this.images[2] || ''}`),
             },
           },
           "opacity": {
@@ -78,7 +83,7 @@ export default {
           },
           "size": {
             "value": 50,
-            "random": false,
+            "random": this.randomSize,
             
           },
           "line_linked": {
@@ -94,7 +99,7 @@ export default {
             "direction": "none",
             "random": true,
             "straight": false,
-            "out_mode": "out",
+            "out_mode": "bounce",
             "bounce": false,
             "attract": {
               "enable": true,
@@ -150,7 +155,7 @@ export default {
 </script>
 
 <style lang="sass">
-  #particles-js 
+  .particles 
     position: absolute
     top: 0
     left: 0

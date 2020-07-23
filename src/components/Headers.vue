@@ -3,9 +3,11 @@
     <div class="container">
       <Navbar />
       <div class="row align-items-center">
-        <article class="col-auto mr-auto index-1 blur">
-          <h1 class="title">Vegan Deserts</h1>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <article class="col-auto mr-auto index-1">
+          <div class="blur">
+            <h1 class="title">Vegan Deserts</h1>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
           <button class="btn btn-primary mt-lg-4 angle-right">Go to catalog</button>
         </article>
         <div class="col-6 index-1">
@@ -14,19 +16,19 @@
       </div>
     </div>
     <div class="circle bg-success"></div>
-    <ParticlesHeader componentId="particle-header"/>
+    <Particles componentId="particle-header"/>
   </header>
 </template>
 
 <script>
   import Navbar from "@/components/Navbar";
-  import ParticlesHeader from "@/components/ParticlesHeader";
+  import Particles from "@/components/Particles";
   
   export default {
     name: "Headers",
     components: {
       Navbar,
-      ParticlesHeader
+      Particles
     }
   };
 </script>

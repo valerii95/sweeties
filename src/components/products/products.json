@@ -1,0 +1,230 @@
+{
+    "cake": [
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      },
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      },
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      },
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      },
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      },
+      {
+        "img": "../../assets/img/products/categories/cake.png",
+        "title": "Торты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "cake"
+      }
+    ],
+    "bars": [
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      },
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      },
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      },
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      },
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      },
+      {
+        "img": "../../assets/img/products/categories/bars.png",
+        "title": "Батончики",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "bars"
+      }
+    ],
+    "ice_cream": [
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      },
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      },
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      },
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      },
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      },
+      {
+        "img": "../../assets/img/products/categories/ace_cream.png",
+        "title": "Мороженое",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "ice_cream"
+      }
+    ],
+    "curds": [
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      },
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      },
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      },
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      },
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      },
+      {
+        "img": "../../assets/img/products/categories/curds.png",
+        "title": "Сырки",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "curds"
+      }
+    ],
+    "sweets": [
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sweets.png",
+        "title": "Конфеты",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sweets"
+      }
+    ],
+    "sets": [
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      },
+      {
+        "img": "../../assets/img/products/categories/sets.png",
+        "title": "Наборы",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+        "id": "sets"
+      }
+    ]
+  }

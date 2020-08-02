@@ -1,6 +1,6 @@
 <template>
     <b-col cols="4">
-        <article class="card mx-auto">
+        <article class="card mx-auto" @click="showCategory()">
             <figure>
                 <img class="img img-fluid" :src="category.img" :alt="category.title" />
                 <figcaption class="px-4 my-3">{{category.title}}</figcaption>
@@ -18,6 +18,11 @@ export default {
             type: Object,
             default: {}
         }
+    },
+    methods: {
+        showCategory() {
+            this.$emit('showCategory', this.category.id);
+        }
     }
 };
 </script>
@@ -31,6 +36,7 @@ export default {
     box-shadow: 0 7px 50px rgba(black, .1)
     cursor: pointer
     transition: .3s all
+    border-radius: 3px 75px 0px 75px !important
     &:hover
         box-shadow: 0 7px 50px rgba(76, 38, 27, .7)
     @media(min-width: 768px)

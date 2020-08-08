@@ -1,23 +1,16 @@
 <template>
-    <div class="faq container p-5">
+    <div class="faq container p-5" id="contacts">
         <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
         <div class="faq__input">
-            <input type="number" id="number-input">
-            <button type="submit" class="faq__input-send btn btn-secondary angle-right" @click="sendNumber">Send</button>
+            <input type="number" id="number-input" class="text-secondary">
+            <button type="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    methods: {
-        sendNumber() {
-            const numberInput = document.querySelector('#number-input'),
-                numberInputVal = numberInput.value;
-
-            alert(numberInputVal);
-        }
-    }
+    
 };
 </script>
 
@@ -49,4 +42,7 @@ export default {
                 height: 65px
                 padding: 10px 20px
                 box-sizing: border-box
+                font-size: 1.5rem
+                font-weight: 900
+                font-family: 'Montserrat'
 </style>

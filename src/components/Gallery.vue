@@ -1,5 +1,5 @@
 <template>
-    <div class="container gallery">
+    <div class="container gallery" id="gallery">
         <h1 class="text-center mb-4">Gallery</h1>
         <div class="justify-content-center position-relative">
             <!-- <button id="gallery-prev"><img :src="require('../assets/img/gallery/prev-arrow.png')" alt=""></button> -->

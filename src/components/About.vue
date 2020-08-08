@@ -1,16 +1,16 @@
 <template>
-  <section class="about mt-5 position-relative">
+  <section class="about mt-5 position-relative" id="about">
     <div class="container">
       <div class="row align-items-center justify-content-between position-relative">
         <div class="circle bg-success"></div>
-        <div class="col-6 col-xxl-5">
+        <div class="col-xs-12 col-md-6 col-xxl-5">
           <img
             class="img img-fluid"
             :src="require('../assets/img/about/about.png')"
             alt="About"
           />
         </div>
-        <article class="col-6 col-xxl-5 blur">
+        <article class="col-xs-12 col-md-6 col-xxl-5 blur">
           <h1 class="mb-3">Basic principles of work</h1>
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -20,6 +20,7 @@
       </div>
     </div>
     <Particles
+      v-if="particleResponsive"
       componentId="particle-about"
       :images="['about/sweet1.png', 'about/sweet2.png', 'about/sweet3.png']"
       :quantity="10"
@@ -33,7 +34,30 @@ import Particles from "@/components/Particles";
 export default {
   components: {
     Particles
-  }
+  },
+  data() {
+        return {
+            particleResponsive: true,
+        };
+    },
+    methods: {
+      toggleParticles() {
+        if (window.innerWidth < 1200) {
+            this.particleResponsive = false;
+        } else {
+            this.particleResponsive = true;
+        }
+      }
+    },
+    mounted() {
+        this.$nextTick(() => {
+            this.toggleParticles();
+
+            window.addEventListener("resize", () => {
+                this.toggleParticles();
+            });
+        });
+    },
 };
 </script>
 

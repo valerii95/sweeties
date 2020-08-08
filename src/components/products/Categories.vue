@@ -1,5 +1,5 @@
 <template>
-    <section class="container p-5 products">
+    <section class="container p-5 products" id="products">
         <h1 class="text-center mb-4" id="categories-title" v-if="isCategory" @click="backToCategories"><span class="animated-arrow">←</span> Back to categories !</h1>
         <h1 class="text-center mb-4" id="categories-title" v-else>Choose your dessert !</h1>
         <div class="categories pt-3">
@@ -390,7 +390,7 @@ export default {
 
 #categories-title.active
     position: sticky
-    top: 0
+    top: 50px
     z-index: 1
     cursor: pointer
     background: rgba(white, .75)

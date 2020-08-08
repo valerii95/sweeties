@@ -1,26 +1,39 @@
 <template>
     <section class="container p-5 products" id="products">
-        <h1 class="text-center mb-4" id="categories-title" v-if="isCategory" @click="backToCategories"><span class="animated-arrow">←</span> Back to categories !</h1>
-        <h1 class="text-center mb-4" id="categories-title" v-else>Choose your dessert !</h1>
+        <a class="text-secondary" id="categories-title" href="#products" v-if="isCategory">
+            <h1 class="text-center mb-4" @click="backToCategories">
+                <span class="animated-arrow">←</span> Back to categories !
+            </h1>
+        </a>
+        <a class="text-secondary" id="categories-title" v-else>
+            <h1 class="text-center mb-4">Choose your dessert !</h1>
+        </a>
         <div class="categories pt-3">
-            <b-row class="justify-content-center">
-                <Card
-                    v-for="(category, idx) in categories"
-                    :key="idx"
-                    :category="category"
-                    @showCategory="showCategory"
-                />
-            </b-row>
+            <div class="justify-content-center">
+                <VueSlickCarousel v-bind="sliderSettings" ref="slick" @reInit="changeDotsView">
+                    <Card
+                        v-for="(category, idx) in categories"
+                        :key="idx"
+                        :category="category"
+                        @showCategory="showCategory"
+                    />
+                </VueSlickCarousel>
+                <ul class="customDots" @click="changeSlide($event)"></ul>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
 import Card from "./Card";
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
 export default {
     components: {
         Card,
+        VueSlickCarousel,
     },
     data() {
         return {
@@ -73,42 +86,84 @@ export default {
                 cake: [
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты1",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты2",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты3",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты4",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты5",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты",
+                        title: "Торты6",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты7",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты8",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты9",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты10",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты11",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                    },
+                    {
+                        img: require("../../assets/img/products/categories/cake.png"),
+                        title: "Торты12",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -337,13 +392,44 @@ export default {
             },
 
             categoriesBackup: [],
-            
+
             isCategory: false,
+
+            sliderSettings: {
+                infinite: true,
+                slidesToShow: 3,
+                speed: 500,
+                rows: 2,
+                slidesPerRow: 1,
+                arrows: false,
+                dots: false,
+                swipe: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            rows: 1,
+                            swipe: true,
+                            arrows: true
+                        },
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            rows: 1,
+                            swipe: true,
+                            arrows: true
+                        },
+                    },
+                ],
+            },
         };
     },
-    computed: {
-        
-    },
+    computed: {},
     methods: {
         swapCategory(category, isCategory) {
             const products = document.querySelector(".products"),
@@ -352,6 +438,7 @@ export default {
             products.classList.add("disabled");
 
             setTimeout(() => {
+                this.$refs.slick.goTo(0);
                 this.categories = category;
                 this.isCategory = isCategory;
                 products.classList.remove("disabled");
@@ -375,7 +462,50 @@ export default {
         backToCategories() {
             this.swapCategory(this.categoriesBackup, false);
         },
+
+        showActiveSlide() {
+            let slides = document.querySelectorAll('.categories .slick-slide');
+
+            let currentSlide = Array.from(slides).indexOf(document.querySelector('.categories .slick-active')) - 2;
+
+            let cardsCounter = Math.round((document.querySelectorAll('.card').length - 2) / 2);
+        
+            const customDots = document.querySelector('.customDots');
+            customDots.innerHTML = '';
+
+            for(let i = 0; i < cardsCounter; i++) {
+                customDots.innerHTML += '<li>&#9675;</li>'
+            }
+
+            let lis = document.querySelectorAll('.customDots li');
+
+            if(lis[currentSlide]) {
+                lis[currentSlide].innerHTML = '<span class="active">&#9679;</span>'
+            }
+
+        },
+
+        changeSlide(e) {
+            const lis = document.querySelectorAll('.customDots li');
+
+            let targetElement = (Array.from(lis).indexOf(e.target));
+            if(!e.target.classList.contains('.customDots')) {
+                if(targetElement !== -1) {
+                    this.$refs.slick.goTo(targetElement);
+                }
+            }
+        },
+
+        changeDotsView(idx) {
+            this.showActiveSlide();
+        }
     },
+    updated() {
+        this.showActiveSlide();        
+    },
+    mounted() {
+        this.showActiveSlide();
+    }
 };
 </script>
 
@@ -388,7 +518,13 @@ export default {
     100%
         transform: translateX(0)
 
+#categories-title
+    text-decoration: none
+    &:hover
+        color: #4C261B !important
+
 #categories-title.active
+    display: block
     position: sticky
     top: 50px
     z-index: 1
@@ -409,4 +545,18 @@ export default {
         left: 0
         z-index: 1
         transform: translateY(calc(-100% - 20px))
+
+.customDots
+    list-style: none
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    li
+        margin: 0 5px
+        cursor: pointer
+        & .active
+            font-size: 25px
+            margin-top: -10px
+            display: inline-block
+            cursor: default
 </style>

@@ -11,7 +11,7 @@
           />
         </div>
         <article class="col-xs-12 col-md-6 col-xxl-5 blur">
-          <h1 class="mb-3">Basic principles of work</h1>
+          <h1 class="mb-3 about__heading">Basic principles of work</h1>
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -67,6 +67,12 @@ export default {
     min-height: 100vh
     align-items: center
     overflow: hidden
+    padding-bottom: 2rem
+    &__heading
+      @media (max-width: 767px)
+        font-size: 7rem
+        margin-top: 1rem
+        line-height: .7
   .text
     @media(min-width: 1200px)
       max-width: 430px

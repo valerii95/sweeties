@@ -1,6 +1,6 @@
 <template>
-    <b-col cols="4">
-        <article class="card mx-auto" @click="showCategory()">
+    <div>
+        <article class="card" @click="showCategory()">
             <figure>
                 <img class="img img-fluid" :src="category.img" :alt="category.title" />
                 <figcaption class="px-4 my-3">{{category.title}}</figcaption>
@@ -8,7 +8,7 @@
             </figure>
             <button class="btn btn-success ml-auto px-0"></button>
         </article>
-    </b-col>
+    </div>
 </template>
 
 <script>
@@ -30,17 +30,22 @@ export default {
 <style lang="sass">
 .card
     color: #000
-    margin-bottom: 80px
+    margin: 30px 30px 80px 30px
     overflow: hidden
     background-color: #fff
-    box-shadow: 0 7px 50px rgba(black, .1)
     cursor: pointer
     transition: .3s all
     border-radius: 3px 75px 0px 75px !important
-    &:hover
-        box-shadow: 0 7px 50px rgba(76, 38, 27, .7)
-    @media(min-width: 768px)
+    box-shadow: 0 1px 1px rgba(black, .1)
+    max-width: 300px
+    @media (min-width: 470px)
+        box-shadow: 0 7px 25px rgba(black, .1)
+        border-color: transparent
+        &:hover
+            box-shadow: 0 7px 25px rgba(76, 38, 27, .7)
+    @media (max-width: 1024px)
         max-width: 300px
+        margin: 30px auto
     .img
         height: 210px
         width: 100%

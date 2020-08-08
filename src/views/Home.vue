@@ -2,21 +2,27 @@
   <div class="home">
     <Headers />
     <About />
-    <Products />
+    <Categories />
+    <Gallery />
+    <Question />
   </div>
 </template>
 
 <script>
 import Headers from "@/components/Headers";
 import About from "@/components/About";
-import Products from "@/components/products/Products";
+import Categories from "@/components/products/Categories";
+import Gallery from "@/components/Gallery";
+import Question from "@/components/Question";
 
 export default {
   name: 'Home',
   components: {
     Headers,
     About,
-    Products
+    Categories,
+    Gallery,
+    Question
   }
 }
 </script>

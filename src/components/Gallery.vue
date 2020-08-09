@@ -8,7 +8,7 @@
                     <img :src="require('../assets/img/gallery/prev-arrow.png')" alt="" id="gallery-prev">
                 </template>
                 <div v-for="(image, idx) in gallery" :key="idx" class="gallery__img">
-                    <img class="mx-auto d-block" :src="image" />
+                    <img class="mx-auto d-block img-fluid" :src="image" />
                 </div>
                 <template v-slot:nextArrow>
                     <img :src="require('../assets/img/gallery/next-arrow.png')" alt="" id="gallery-next">
@@ -48,7 +48,25 @@ export default {
                 speed: 500,
                 rows: 2,
                 slidesPerRow: 1,
-                arrows: true
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            rows: 1
+                        },
+                    },
+                ],
+
             },
         };
     },

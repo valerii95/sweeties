@@ -2,11 +2,11 @@
     <section class="container p-5 products" id="products">
         <a class="text-secondary" id="categories-title" href="#products" v-if="isCategory">
             <h1 class="text-center mb-4" @click="backToCategories">
-                <span class="animated-arrow">←</span> Back to categories !
+                <span class="animated-arrow">←</span> Back to categories
             </h1>
         </a>
         <a class="text-secondary" id="categories-title" v-else>
-            <h1 class="text-center mb-4">Choose your dessert !</h1>
+            <h1 class="text-center mb-4">Choose your dessert</h1>
         </a>
         <div class="categories pt-3">
             <div class="justify-content-center">
@@ -205,59 +205,38 @@ export default {
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
                     },
-                    {
-                        img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "bars",
-                    },
                 ],
                 ice_cream: [
                     {
                         img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
+                        title: "Мороженое1",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
                     },
                     {
                         img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
+                        title: "Мороженое2",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
                     },
                     {
                         img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "ice_cream",
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "ice_cream",
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "ice_cream",
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое",
+                        title: "Мороженое3",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
                     },
                 ],
                 curds: [
+                    {
+                        img: require("../../assets/img/products/categories/curds.png"),
+                        title: "Сырки",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "curds",
+                    },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
                         title: "Сырки",
@@ -406,7 +385,7 @@ export default {
                 swipe: false,
                 responsive: [
                     {
-                        breakpoint: 1024,
+                        breakpoint: 1200,
                         settings: {
                             slidesToShow: 2,
                             slidesToScroll: 1,
@@ -438,6 +417,10 @@ export default {
             products.classList.add("disabled");
 
             setTimeout(() => {
+                if(window.innerWidth > 1200) {
+                    this.sliderSettings.rows = Math.ceil(category.length / 3);
+                }
+
                 this.$refs.slick.goTo(0);
                 this.categories = category;
                 this.isCategory = isCategory;
@@ -464,25 +447,39 @@ export default {
         },
 
         showActiveSlide() {
-            let slides = document.querySelectorAll('.categories .slick-slide');
-
-            let currentSlide = Array.from(slides).indexOf(document.querySelector('.categories .slick-active')) - 2;
-
-            let cardsCounter = Math.round((document.querySelectorAll('.card').length - 2) / 2);
-        
             const customDots = document.querySelector('.customDots');
-            customDots.innerHTML = '';
 
-            for(let i = 0; i < cardsCounter; i++) {
-                customDots.innerHTML += '<li>&#9675;</li>'
+            
+
+            if(window.innerWidth < 1200) {
+                let slides = document.querySelectorAll('.categories .slick-slide');
+
+                let currentSlide = Array.from(slides).indexOf(document.querySelector('.categories .slick-active')) - 2;
+
+                let cardsCounter = Math.round((document.querySelectorAll('.card').length - 2) / 2);
+            
+                customDots.innerHTML = '';
+
+                for(let i = 0; i < cardsCounter; i++) {
+                    customDots.innerHTML += '<li></li>'
+                }
+
+                let lis = document.querySelectorAll('.customDots li');
+
+                if(window.innerWidth <= 992) {
+                    if(lis[currentSlide + 1]) {
+                        lis[currentSlide + 1].innerHTML = '<span class="active"></span>'
+                    }
+                } else {
+                    if(lis[currentSlide]) {
+                        lis[currentSlide].innerHTML = '<span class="active"></span>'
+                    }
+                }
+
+                
+            } else {
+                customDots.innerHTML = '';
             }
-
-            let lis = document.querySelectorAll('.customDots li');
-
-            if(lis[currentSlide]) {
-                lis[currentSlide].innerHTML = '<span class="active">&#9679;</span>'
-            }
-
         },
 
         changeSlide(e) {
@@ -496,7 +493,7 @@ export default {
             }
         },
 
-        changeDotsView(idx) {
+        changeDotsView() {
             this.showActiveSlide();
         }
     },
@@ -520,6 +517,9 @@ export default {
 
 #categories-title
     text-decoration: none
+    h1
+        @media (max-width: 992px)
+            font-size: 4rem
     &:hover
         color: #4C261B !important
 
@@ -530,6 +530,8 @@ export default {
     z-index: 1
     cursor: pointer
     background: rgba(white, .75)
+    @media (max-width: 1200px)
+        top: 70px
     .animated-arrow
         display: inline-block
         animation: text-animation 2s infinite
@@ -554,9 +556,18 @@ export default {
     li
         margin: 0 5px
         cursor: pointer
+        width: 10px
+        height: 10px
+        border: 1px solid #4C261B
+        border-radius: 50%
+        position: relative
         & .active
-            font-size: 25px
-            margin-top: -10px
             display: inline-block
             cursor: default
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: #4C261B
 </style>

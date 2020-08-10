@@ -18,6 +18,8 @@ export default {
     .faq
         &__heading
             max-width: 800px
+            @media (max-width: 1000px)
+                font-size: 4rem
         &__input
             max-width: 1000px
             margin: 0 auto
@@ -25,13 +27,17 @@ export default {
             &-send.btn
                 position: absolute
                 right: 20px
-                height: 50px
+                height: 45px
                 box-sizing: border-box
                 padding: 0
                 padding-left: 40px
                 padding-right: 40px
                 top: 50%
                 transform: translateY(-50%)
+                @media (max-width: 1000px)
+                    height: 35px
+                    font-size: 1rem
+                    padding: 0 20px 0 20px
             input
                 width: 100%
                 border-radius: 30px
@@ -45,4 +51,7 @@ export default {
                 font-size: 1.5rem
                 font-weight: 900
                 font-family: 'Montserrat'
+                @media (max-width: 1000px)
+                    height: 50px
+                    font-size: 1rem
 </style>

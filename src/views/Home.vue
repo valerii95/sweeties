@@ -4,7 +4,7 @@
     <About />
     <Categories />
     <Gallery />
-    <Question />
+    <Footer />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import Headers from "@/components/Headers";
 import About from "@/components/About";
 import Categories from "@/components/products/Categories";
 import Gallery from "@/components/Gallery";
-import Question from "@/components/Question";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'Home',
@@ -22,7 +22,7 @@ export default {
     About,
     Categories,
     Gallery,
-    Question
+    Footer
   }
 }
 </script>

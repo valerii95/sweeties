@@ -20,6 +20,7 @@
             </div>
         </div>
         <div class="circle bg-success"></div>
+        
         <Particles v-if="particleResponsive" componentId="particle-header" />
     </header>
 </template>

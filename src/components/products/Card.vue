@@ -30,7 +30,7 @@ export default {
 <style lang="sass">
 .card
     color: #000
-    margin: 30px 30px 80px 30px
+    margin: 30px auto 80px auto
     overflow: hidden
     background-color: #fff
     cursor: pointer

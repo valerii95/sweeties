@@ -1,16 +1,32 @@
 <template>
     <div class="faq container p-5" id="contacts">
         <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
-        <div class="faq__input">
-            <input type="number" id="number-input" class="text-secondary">
-            <button type="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
-        </div>
+        <form action="1.php" method="post">
+            <div class="faq__input">
+                <input type="number" id="number-input" class="text-secondary">
+                <button type="submit" name="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
+            </div>
+        </form>
     </div>
 </template>
 
 <script>
 export default {
-    
+    methods: {
+        onSubmit(e) {
+          e.preventDefault();
+             fetch('/1.php', {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({phone: "123213"})
+                })
+                .then(res=>res.json())
+                .then(res => console.log(res));
+      }
+    }
 };
 </script>
 

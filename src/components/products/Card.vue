@@ -6,7 +6,7 @@
                 <figcaption class="px-4 my-3">{{category.title}}</figcaption>
                 <p class="px-4">{{category.text}}</p>
             </figure>
-            <button class="btn btn-success ml-auto px-0"></button>
+            <button class="btn btn-success ml-auto px-0" @click="addToCart(category)"></button>
         </article>
     </div>
 </template>
@@ -17,11 +17,20 @@ export default {
         category: {
             type: Object,
             default: {}
+        },
+        isCategory: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
         showCategory() {
             this.$emit('showCategory', this.category.id);
+        },
+        addToCart(product) {
+            if(this.isCategory) {
+                this.$store.dispatch('addToCart', product);
+            }
         }
     }
 };

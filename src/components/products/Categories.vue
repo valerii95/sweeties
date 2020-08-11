@@ -16,6 +16,7 @@
                         :key="idx"
                         :category="category"
                         @showCategory="showCategory"
+                        :isCategory="isCategory"
                     />
                 </VueSlickCarousel>
                 <ul class="customDots" @click="changeSlide($event)"></ul>

@@ -1,6 +1,6 @@
 <template>
     <div class="cart-wrapper">
-        <h1>Cart: {{products.length}}</h1>
+        <h1>Cart</h1>
         <div class="cart">
             <div v-for="(product, idx) in products" :key="idx">
                 <img :src="product.img" :alt="product.title" class="cart__img">

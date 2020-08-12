@@ -1,7 +1,13 @@
 <template>
     <div class="navbar-wrapper">
         <b-navbar toggleable="md" class="align-items-center container">
-            <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+            <div class="d-flex">
+                <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+                <div class="align-items-center d-md-none d-flex">
+                    <img @click="openCart" class="cart-img" src="../assets/img/cart.png" alt="cart">
+                    <p class="text-white ml-2">{{cartLength}}</p>
+                </div>
+            </div>
 
             <b-navbar-brand>
                 <div class="navbar__logo">
@@ -18,23 +24,42 @@
             </b-navbar-brand>
 
             <b-collapse id="nav-text-collapse" is-nav class="justify-content-end">
-                <b-navbar-nav>
+                <b-navbar-nav class="position-relative align-items-center">
                     <b-nav-item href="#home">Главная</b-nav-item>
                     <b-nav-item href="#about">О Нас</b-nav-item>
                     <b-nav-item href="#products">Десерты</b-nav-item>
                     <b-nav-item href="#gallery">Галерея</b-nav-item>
                     <b-nav-item href="#contacts">Контакты</b-nav-item>
+                    <div class="align-items-center d-md-flex d-none">
+                        <img @click="openCart" class="cart-img" src="../assets/img/cart.png" alt="cart">
+                        <p class="text-white ml-2">{{cartLength}}</p>
+                    </div>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
+        <Cart />
     </div>
 </template>
 
 <script>
+import Cart from "./Cart";
+
 export default {
+    components: {
+        Cart
+    },
     methods: {
         toggleIcons() {
             this.$refs.social.classList.toggle('disabled');
+        },
+        openCart() {
+            document.querySelector('.cart-wrapper').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+    },
+    computed: {
+        cartLength() {
+            return this.$store.state.products.length;
         }
     },
     mounted() {
@@ -69,7 +94,7 @@ export default {
     transition: .3s all ease-in-out
     left: 0
     @media (max-width: 1200px)
-        background-color: rgba(0, 0, 0, .3)
+        background-color: rgba(0, 0, 0, .25)
     .navbar
         height: 90px
         transition: .3s all ease-in-out
@@ -99,7 +124,7 @@ export default {
             border: none
         &-nav
             @media (max-width: 767px)
-                background-color: rgba(0, 0, 0, .3)
+                background-color: rgba(0, 0, 0, .25)
                 padding: 0 10px
         @media (max-width: 1200px)
             max-height: 70px
@@ -110,7 +135,7 @@ export default {
             @media (max-width: 1200px)
                 max-height: 70px
     &.fixed
-        background-color: rgba(0, 0, 0, .3)
+        background-color: rgba(0, 0, 0, .35)
         // backdrop-filter: blur(2px)
         .navbar
             @media (min-width: 1200px)
@@ -118,4 +143,9 @@ export default {
             &-brand img
                 @media (min-width: 1200px)
                     transform: translateY(-13px)
+    .cart-img
+        max-width: 40px
+        cursor: pointer
+        filter: invert(1)
+        margin-left: .5rem
 </style>

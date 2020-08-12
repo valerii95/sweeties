@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    products: JSON.parse(localStorage.getItem('products')) || []
+    products: navigator.cookieEnabled ? JSON.parse(localStorage.getItem('products')) || [] : []
   },
   mutations: {
     addToCart(state, product) {
@@ -18,19 +18,24 @@ export default new Vuex.Store({
         state.products.pop();
       }
       state.products.push(product);
-      localStorage.setItem('products', JSON.stringify(state.products));
     },
     removeFromCart(state, idx) {
       state.products.splice(idx, 1);
-      localStorage.setItem('products', JSON.stringify(state.products));
+    },
+    isCookiesEnabled(state) {
+      if(navigator.cookieEnabled) {
+        localStorage.setItem('products', JSON.stringify(state.products));
+      }
     }
   },
   actions: {
     addToCart(context, product) {
       context.commit('addToCart', product);
+      context.commit('isCookiesEnabled');
     },
     removeFromCart(context, idx) {
       context.commit('removeFromCart', idx);
+      context.commit('isCookiesEnabled');
     }
   },
   getters: {

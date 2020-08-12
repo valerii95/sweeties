@@ -5,7 +5,6 @@
     <Categories />
     <Gallery />
     <Footer />
-    <Cart />
   </div>
 </template>
 
@@ -15,7 +14,6 @@ import About from "@/components/About";
 import Categories from "@/components/products/Categories";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
-import Cart from "@/components/Cart";
 
 export default {
   name: 'Home',
@@ -24,8 +22,7 @@ export default {
     About,
     Categories,
     Gallery,
-    Footer,
-    Cart
+    Footer
   }
 }
 </script>

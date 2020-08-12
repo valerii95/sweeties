@@ -88,7 +88,7 @@ export default {
 .gallery
     #gallery-next, #gallery-prev
         position: absolute
-        z-index: 5
+        z-index: 1
         top: 50%
         transform: translateY(-50%)
         cursor: pointer

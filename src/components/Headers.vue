@@ -85,7 +85,7 @@ article
 .circle
     position: absolute
     top: -100%
-    right: -50%
+    right: -49%
     width: 100%
     height: 195%
     border-radius: 50%

@@ -2,7 +2,7 @@
     <section class="container p-5 products" id="products">
         <a class="text-secondary" id="categories-title" href="#products" v-if="isCategory">
             <h1 class="text-center mb-4" @click="backToCategories">
-                <span class="animated-arrow">←</span> Back to categories
+                <span class="animated-arrow">←</span> Back
             </h1>
         </a>
         <a class="text-secondary" id="categories-title" v-else>

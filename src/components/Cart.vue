@@ -6,10 +6,17 @@
             <img width="50" class="close-img" src="../assets/img/close.png" @click="closeCart">
             <div class="cart">
                 <div ref="cartItem" v-for="(product, idx) in products" :key="idx" class="cart-item d-md-flex align-items-center justify-content-between mx-auto px-2 mb-4">
-                    <img :src="product.img" :alt="product.title" class="cart__img img-fluid w-md-25">
-                    <div class="mt-2 mt-md-0 ml-md-3 d-flex flex-wrap justify-content-between align-items center w-md-75">
-                        <p>{{product.title}}</p>
-                        <p>Quantity: {{product.quantity}}</p>
+                    <img :src="product.img" :alt="product.title" class="cart__img img-fluid w-md-25 d-md-block d-flex mx-auto">
+                    <div class="mt-2 mt-md-0 ml-md-3 d-flex flex-wrap justify-content-between align-items-center w-md-75">
+                        <div class="w-md-50 justify-content-between align-items-center d-md-flex">
+                            <p>{{product.title}}</p>
+                            <p>Quantity: <span ref="qty">{{product.quantity}}</span></p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty">+</button>
+                            <input ref="qtyInput" type="number" class="mx-2 quantity-input" @input="setQty">
+                            <button class="btn p-0 cursor-pointer quantity-counter" @click="decrementQty">-</button>
+                        </div>
                         <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx)">
                     </div>
                 </div>
@@ -33,12 +40,25 @@ export default {
                 this.$refs.cartItem[idx].classList.remove('removed');
                 this.$store.dispatch('removeFromCart', idx);
             }, 400);
-            
         },
         closeCart() {
             this.$refs.cart.style.display = 'none';
             document.body.style.overflow = 'visible';
+        },
+        incrementQty() {
+
+        },
+        decrementQty() {
+
+        },
+        setQty() {
+            
         }
+    },
+    mounted() {
+        this.$refs.qtyInput.forEach((el, idx) => {
+            el.value = this.$refs.qty[idx].innerText;
+        })
     }
 };
 </script>
@@ -54,6 +74,10 @@ export default {
         background-color: rgba(255, 255, 255, .99)
         display: none
         overflow: auto
+        .quantity-counter
+            font-size: 2rem
+        .quantity-input
+            width: 50px
         .close-img
             position: absolute
             right: 3%
@@ -63,5 +87,5 @@ export default {
             max-width: 1100px
             &.removed
                 transition: .4s all ease-in-out
-                transform: translateX(-1000px)
+                transform: translateX(-1500px)
 </style>

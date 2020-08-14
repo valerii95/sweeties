@@ -3,7 +3,7 @@
         <b-navbar toggleable="md" class="align-items-center container">
             <div class="d-flex">
                 <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-                <div class="align-items-center d-md-none d-flex">
+                <div class="align-items-center d-md-none d-flex cursor-pointer" @click="openCart">
                     <img @click="openCart" class="cart-img" src="../assets/img/cart.png" alt="cart">
                     <p class="text-white ml-2">{{cartLength}}</p>
                 </div>
@@ -30,8 +30,8 @@
                     <b-nav-item href="#products">Десерты</b-nav-item>
                     <b-nav-item href="#gallery">Галерея</b-nav-item>
                     <b-nav-item href="#contacts">Контакты</b-nav-item>
-                    <div class="align-items-center d-md-flex d-none">
-                        <img @click="openCart" class="cart-img" src="../assets/img/cart.png" alt="cart">
+                    <div class="align-items-center d-md-flex d-none cursor-pointer" @click="openCart">
+                        <img class="cart-img" src="../assets/img/cart.png" alt="cart">
                         <p class="text-white ml-2">{{cartLength}}</p>
                     </div>
                 </b-navbar-nav>

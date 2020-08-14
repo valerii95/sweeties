@@ -29,7 +29,6 @@ export default {
         },
         addToCart(product) {
             if(this.isCategory) {
-                console.log(product)
                 this.$store.dispatch('addToCart', product);
             }
         }

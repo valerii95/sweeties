@@ -19,12 +19,12 @@
         </article>
       </div>
     </div>
-    <Particles
+    <!-- <Particles
       v-if="particleResponsive"
       componentId="particle-about"
       :images="['about/sweet1.png', 'about/sweet2.png', 'about/sweet3.png']"
       :quantity="10"
-      :randomSize="true" />
+      :randomSize="true" /> -->
   </section>
 </template>
 

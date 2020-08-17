@@ -13,9 +13,9 @@
                             <p>Quantity: <span ref="qty">{{product.quantity}}</span></p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty">+</button>
-                            <input ref="qtyInput" type="number" class="mx-2 quantity-input" @input="setQty">
-                            <button class="btn p-0 cursor-pointer quantity-counter" @click="decrementQty">-</button>
+                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
+                            <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
+                            <button class="btn p-0 cursor-pointer quantity-counter" @click="decrementQty(product.title)">-</button>
                         </div>
                         <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx)">
                     </div>
@@ -45,21 +45,17 @@ export default {
             this.$refs.cart.style.display = 'none';
             document.body.style.overflow = 'visible';
         },
-        incrementQty() {
-
+        incrementQty(title) {
+            this.$store.dispatch('incrementQty', title);
         },
-        decrementQty() {
-
+        decrementQty(title) {
+            this.$store.dispatch('decrementQty', title);
         },
-        setQty() {
-            
+        setQty(e, title) {
+            this.$store.dispatch('setQty', [Number(e.target.value), title]);
         }
     },
-    mounted() {
-        this.$refs.qtyInput.forEach((el, idx) => {
-            el.value = this.$refs.qty[idx].innerText;
-        })
-    }
+    
 };
 </script>
 

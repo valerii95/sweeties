@@ -9,15 +9,14 @@ export default new Vuex.Store({
   },
   mutations: {
     addToCart(state, product) {
-      if(!product.quantity) {
-        product.quantity = 1;
+      let productIdx = state.products.map(el => el.title).indexOf(product.title);
+
+      if(productIdx !== -1) {
+        state.products[productIdx]['quantity']++;
       }
-      let productTitles = state.products.map(el => el.title);
-      if(productTitles.indexOf(product.title) !== -1) {
-        product.quantity++;
-        state.products.pop();
+      if(productIdx == -1) {
+        state.products.push(product);
       }
-      state.products.push(product);
     },
     removeFromCart(state, idx) {
       state.products.splice(idx, 1);
@@ -26,6 +25,20 @@ export default new Vuex.Store({
       if(navigator.cookieEnabled) {
         localStorage.setItem('products', JSON.stringify(state.products));
       }
+    },
+    incrementQty(state, title) {
+      let productIdx = state.products.map(el => el.title).indexOf(title);
+      state.products[productIdx]['quantity']++;
+    },
+    decrementQty(state, title) {
+      let productIdx = state.products.map(el => el.title).indexOf(title);
+      if(state.products[productIdx]['quantity'] > 1) {
+        state.products[productIdx]['quantity']--;
+      }
+    },
+    setQty(state, args) {
+      let productIdx = state.products.map(el => el.title).indexOf(args[1]);
+      state.products[productIdx]['quantity'] = args[0];
     }
   },
   actions: {
@@ -35,6 +48,18 @@ export default new Vuex.Store({
     },
     removeFromCart(context, idx) {
       context.commit('removeFromCart', idx);
+      context.commit('isCookiesEnabled');
+    },
+    incrementQty(context, title) {
+      context.commit('incrementQty', title);
+      context.commit('isCookiesEnabled');
+    },
+    decrementQty(context, title) {
+      context.commit('decrementQty', title);
+      context.commit('isCookiesEnabled');
+    },
+    setQty(context, args) {
+      context.commit('setQty', args);
       context.commit('isCookiesEnabled');
     }
   },

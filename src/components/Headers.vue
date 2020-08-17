@@ -68,7 +68,7 @@ header
     min-height: 100vh
     padding-top: 100px
     @media (max-width: 1200px)
-        background-image: url('../assets/img/header/cake.png');
+        background-image: url('../assets/img/header/cake.png')
         background-size: contain
         background-repeat: no-repeat
         background-position: center right

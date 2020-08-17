@@ -91,6 +91,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -98,6 +99,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -105,6 +107,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -112,6 +115,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -119,6 +123,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -126,6 +131,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -133,6 +139,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -140,6 +147,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -147,6 +155,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -154,6 +163,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -161,6 +171,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
@@ -168,6 +179,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        quantity: 1
                     },
                 ],
                 bars: [
@@ -177,6 +189,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
@@ -184,6 +197,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
@@ -191,6 +205,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
@@ -198,6 +213,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
@@ -205,6 +221,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        quantity: 1
                     },
                 ],
                 ice_cream: [
@@ -214,6 +231,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/ace_cream.png"),
@@ -221,6 +239,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/ace_cream.png"),
@@ -228,6 +247,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        quantity: 1
                     },
                 ],
                 curds: [
@@ -237,6 +257,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -244,6 +265,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -251,6 +273,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -258,6 +281,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -265,6 +289,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -272,6 +297,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
@@ -279,6 +305,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        quantity: 1
                     },
                 ],
                 sweets: [
@@ -288,6 +315,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
@@ -295,6 +323,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
@@ -302,6 +331,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
@@ -309,6 +339,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
@@ -316,6 +347,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
@@ -323,6 +355,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        quantity: 1
                     },
                 ],
                 sets: [
@@ -332,6 +365,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
@@ -339,6 +373,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
@@ -346,6 +381,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
@@ -353,6 +389,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
@@ -360,6 +397,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
@@ -367,6 +405,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        quantity: 1
                     },
                 ],
             },

@@ -91,6 +91,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -99,6 +100,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -107,6 +109,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -115,6 +118,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -123,6 +127,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -131,6 +136,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -139,6 +145,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -147,6 +154,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -155,6 +163,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -163,6 +172,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -171,6 +181,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -179,6 +190,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
+                        price: 100,
                         quantity: 1
                     },
                 ],
@@ -189,6 +201,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -197,6 +210,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -205,6 +219,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -213,6 +228,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -221,6 +237,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
+                        price: 100,
                         quantity: 1
                     },
                 ],
@@ -231,6 +248,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -239,6 +257,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        price: 100,
                         quantity: 1
                     },
                     {
@@ -247,6 +266,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
+                        price: 100,
                         quantity: 1
                     },
                 ],
@@ -257,6 +277,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -265,6 +286,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -273,6 +295,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -281,6 +304,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -289,6 +313,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -297,6 +322,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -305,6 +331,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
+                        price: 150,
                         quantity: 1
                     },
                 ],
@@ -315,6 +342,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -323,6 +351,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -331,6 +360,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -339,6 +369,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -347,6 +378,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -355,6 +387,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
+                        price: 150,
                         quantity: 1
                     },
                 ],
@@ -365,6 +398,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -373,6 +407,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -381,6 +416,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -389,6 +425,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -397,6 +434,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                     {
@@ -405,6 +443,7 @@ export default {
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
+                        price: 150,
                         quantity: 1
                     },
                 ],

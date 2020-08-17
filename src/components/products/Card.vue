@@ -1,12 +1,15 @@
 <template>
     <div>
-        <article class="card" @click="showCategory()">
+        <article ref="card" class="card" @click="showCategory()">
             <figure>
                 <img class="img img-fluid" :src="category.img" :alt="category.title" />
                 <figcaption class="px-4 my-3">{{category.title}}</figcaption>
                 <p class="px-4">{{category.text}}</p>
             </figure>
-            <button class="btn btn-success ml-auto px-0" @click="addToCart(category)"></button>
+            <div class="d-flex justify-content-between">
+                <p class="ml-4 card__price" v-if="category.price">{{category.price}} mdl</p>
+                <button class="btn btn-success ml-auto px-0" @click="addToCart(category)"></button>
+            </div>
         </article>
     </div>
 </template>
@@ -29,6 +32,11 @@ export default {
         },
         addToCart(product) {
             if(this.isCategory) {
+                this.$refs.card.classList.add('animate');
+                setTimeout(() => {
+                    this.$refs.card.classList.remove('animate');
+                },350);
+
                 this.$store.dispatch('addToCart', product);
             }
         }
@@ -37,6 +45,18 @@ export default {
 </script>
 
 <style lang="sass">
+@keyframes card-animation
+    0%
+        transform: translateY(0)
+    25%
+        transform: translateY(-10px)
+    50%
+        transform: translateY(0)
+    75%
+        transform: translateY(10px)
+    100%
+        transform: translateY(0)
+
 .card
     color: #000
     margin: 30px auto 80px auto
@@ -47,6 +67,12 @@ export default {
     border-radius: 3px 75px 0px 75px !important
     box-shadow: 0 1px 1px rgba(black, .1)
     max-width: 300px
+    &.animate
+        animation: card-animation .35s
+    & &__price
+        font-size: 1.25rem
+        font-weight: 600
+        color: #4C261B
     @media (min-width: 470px)
         box-shadow: 0 7px 25px rgba(black, .1)
         border-color: transparent

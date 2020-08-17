@@ -10,6 +10,7 @@
                     <div class="mt-2 mt-md-0 ml-md-3 d-flex flex-wrap justify-content-between align-items-center w-md-75">
                         <div class="w-md-50 justify-content-between align-items-center d-md-flex">
                             <p>{{product.title}}</p>
+                            <p>{{product.price}} mdl</p>
                             <p>Quantity: <span ref="qty">{{product.quantity}}</span></p>
                         </div>
                         <div class="d-flex align-items-center">
@@ -17,10 +18,11 @@
                             <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
                             <button class="btn p-0 cursor-pointer quantity-counter" @click="decrementQty(product.title)">-</button>
                         </div>
-                        <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx)">
+                        <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.title)">
                     </div>
                 </div>
             </div>
+            <h2 v-if="products.length" class="text-center mb-2">Total: <span id="total">{{totalSum}}</span> mdl</h2>
             <button v-if="products.length" class="btn btn-primary angle-right d-block mx-auto">Checkout</button>
         </div>
     </div>
@@ -31,14 +33,17 @@ export default {
     computed: {
         products() {
             return this.$store.getters.products;
+        },
+        totalSum() {
+            return this.$store.getters.totalSum;
         }
     },
     methods: {
-        removeFromCart(e, idx) {
+        removeFromCart(e, idx, title) {
             this.$refs.cartItem[idx].classList.add('removed');
             setTimeout(() => {
                 this.$refs.cartItem[idx].classList.remove('removed');
-                this.$store.dispatch('removeFromCart', idx);
+                this.$store.dispatch('removeFromCart', [idx, title]);
             }, 400);
         },
         closeCart() {
@@ -62,16 +67,19 @@ export default {
 <style lang="sass">
     .cart-wrapper
         position: fixed
-        top: 3px
-        left: 3px
-        bottom: 3px
-        right: 3px
+        top: 5px
+        left: 5px
+        bottom: 5px
+        right: 5px
+        border-radius: 4px
+        box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.75)
         z-index: 999
         background-color: rgba(255, 255, 255, .99)
         display: none
         overflow: auto
         .quantity-counter
             font-size: 2rem
+            box-shadow: none !important
         .quantity-input
             width: 50px
         .close-img

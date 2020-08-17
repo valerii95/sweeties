@@ -18,8 +18,10 @@ export default new Vuex.Store({
         state.products.push(product);
       }
     },
-    removeFromCart(state, idx) {
-      state.products.splice(idx, 1);
+    removeFromCart(state, args) {
+      let productIdx = state.products.map(el => el.title).indexOf(args[1]);
+      state.products[productIdx]['quantity'] = 1;
+      state.products.splice(args[0], 1);
     },
     isCookiesEnabled(state) {
       if(navigator.cookieEnabled) {
@@ -46,8 +48,8 @@ export default new Vuex.Store({
       context.commit('addToCart', product);
       context.commit('isCookiesEnabled');
     },
-    removeFromCart(context, idx) {
-      context.commit('removeFromCart', idx);
+    removeFromCart(context, args) {
+      context.commit('removeFromCart', args);
       context.commit('isCookiesEnabled');
     },
     incrementQty(context, title) {
@@ -61,11 +63,20 @@ export default new Vuex.Store({
     setQty(context, args) {
       context.commit('setQty', args);
       context.commit('isCookiesEnabled');
-    }
+    },
   },
   getters: {
     products(state) {
       return state.products;
+    },
+    totalSum(state) {
+      let counter = 0;
+      
+      state.products.forEach(product => {
+        counter += (product.price * product.quantity)
+      });
+
+      return counter;
     }
   }
 })

@@ -1,6 +1,6 @@
 <template>
     <div class="cart-wrapper py-4" ref="cart">
-        <div class="cart-content">
+        <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
             <h1 v-if="products.length" :data-qty="products.length" class="text-center">Cart</h1>
             <h1 v-else class="text-center">Cart is Empty</h1>
             <img width="50" class="close-img" src="../assets/img/close.png" @click="closeCart">
@@ -23,19 +23,30 @@
                 </div>
             </div>
             <h2 v-if="products.length" class="text-center mb-2">Total: <span id="total">{{totalSum}}</span> mdl</h2>
-            <button v-if="products.length" class="btn btn-primary angle-right d-block mx-auto">Checkout</button>
+            <button v-if="products.length" class="btn btn-primary angle-right d-block mx-auto" @click="checkout()">Checkout</button>
         </div>
+        <Checkout v-if="checkoutPressed" :products="products" @backToCart="backToCart" />
     </div>
 </template>
 
 <script>
+import Checkout from './Checkout';
+
 export default {
+    components: {
+        Checkout
+    },
     computed: {
         products() {
             return this.$store.getters.products;
         },
         totalSum() {
             return this.$store.getters.totalSum;
+        }
+    },
+    data() {
+        return {
+            checkoutPressed: false
         }
     },
     methods: {
@@ -58,6 +69,12 @@ export default {
         },
         setQty(e, title) {
             this.$store.dispatch('setQty', [Number(e.target.value), title]);
+        },
+        checkout() {
+            this.checkoutPressed = true;
+        },
+        backToCart() {
+            this.checkoutPressed = false;
         }
     },
     
@@ -73,7 +90,7 @@ export default {
         right: 5px
         border-radius: 4px
         box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.75)
-        z-index: 999
+        z-index: 100
         background-color: rgba(255, 255, 255, .99)
         display: none
         overflow: auto

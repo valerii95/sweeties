@@ -586,7 +586,7 @@ export default {
 </script>
 
 <style lang="sass">
-@keyframes text-animation
+@keyframes arrow-animation
     0%
         transform: translateX(0)
     50%
@@ -602,6 +602,9 @@ export default {
     &:hover
         color: #4C261B !important
 
+.animated-arrow
+    display: inline-block
+    animation: arrow-animation 2s infinite
 #categories-title.active
     display: block
     position: sticky
@@ -611,9 +614,7 @@ export default {
     background: rgba(white, .75)
     @media (max-width: 1200px)
         top: 70px
-    .animated-arrow
-        display: inline-block
-        animation: text-animation 2s infinite
+    
 .products
     transition: .5s all ease-in-out
     &.disabled

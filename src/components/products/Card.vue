@@ -2,7 +2,7 @@
     <div>
         <article ref="card" class="card" @click="showCategory()">
             <figure>
-                <img class="img img-fluid" :src="category.img" :alt="category.title" />
+                <img ref="cardImg" class="img img-fluid" :src="category.img" :alt="category.title" />
                 <figcaption class="px-4 my-3">{{category.title}}</figcaption>
                 <p class="px-4">{{category.text}}</p>
             </figure>
@@ -32,12 +32,26 @@ export default {
         },
         addToCart(product) {
             if(this.isCategory) {
-                this.$refs.card.classList.add('animate');
-                setTimeout(() => {
-                    this.$refs.card.classList.remove('animate');
-                },350);
+                // this.$refs.card.classList.add('animate');
+                // setTimeout(() => {
+                //     this.$refs.card.classList.remove('animate');
+                // }, 350);
 
-                this.$store.dispatch('addToCart', product);
+                let cloneImg = this.$refs.cardImg.cloneNode(true);
+                cloneImg.classList.add("floating", "temp");
+                document.querySelector('#cart').appendChild(cloneImg);
+                setTimeout(() => {
+                    document.querySelector('#cart').classList.add('animate');
+                    cloneImg.parentNode.removeChild(cloneImg);
+                    
+                    this.$store.dispatch('addToCart', product);
+                }, 700);
+
+                setTimeout(() => {
+                    document.querySelector('#cart').classList.remove('animate');
+                }, 1050)
+
+                
             }
         }
     }
@@ -45,17 +59,59 @@ export default {
 </script>
 
 <style lang="sass">
-@keyframes card-animation
+@keyframes animate
     0%
         transform: translateY(0)
     25%
-        transform: translateY(-10px)
+        transform: translateY(-5px)
     50%
         transform: translateY(0)
     75%
-        transform: translateY(10px)
+        transform: translateY(5px)
     100%
         transform: translateY(0)
+
+@keyframes fade-out-in-right
+    0%
+        transform: translateX(-100px)
+        opacity: 0
+
+    80%
+        transform: translateX(-20px)
+        opacity: 1
+
+    100%
+        transform: translateX(0px)
+        opacity: 0
+
+@keyframes fade-out-in-left
+    0%
+        transform: translateX(100px)
+        opacity: 0
+
+    80%
+        transform: translateX(20px)
+        opacity: 1
+
+    100%
+        transform: translateX(0px)
+        opacity: 0
+
+img.temp
+    height: auto
+    width: 50px
+
+img.floating
+    animation: fade-out-in-right .7s linear 0s 1 normal forwards
+    position: absolute
+    right: 50px
+    top: 6px
+    @media (max-width: 767px)
+        animation: fade-out-in-left .7s linear 0s 1 normal forwards
+        right: -10px
+
+.animate
+    animation: animate .35s
 
 .card
     color: #000
@@ -67,8 +123,6 @@ export default {
     border-radius: 3px 75px 0px 75px !important
     box-shadow: 0 1px 1px rgba(black, .1)
     max-width: 300px
-    &.animate
-        animation: card-animation .35s
     & &__price
         font-size: 1.25rem
         font-weight: 600

@@ -3,7 +3,7 @@
         <b-navbar toggleable="md" class="align-items-center container">
             <div class="d-flex">
                 <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-                <div class="align-items-center d-md-none d-flex cursor-pointer" @click="openCart">
+                <div v-if="isMobile" class="align-items-center d-md-none d-flex cursor-pointer position-relative" id="cart" @click="openCart">
                     <img @click="openCart" class="cart-img" src="../assets/img/cart.png" alt="cart">
                     <p class="text-white ml-2">{{cartLength}}</p>
                 </div>
@@ -30,7 +30,7 @@
                     <b-nav-item href="#products">Десерты</b-nav-item>
                     <b-nav-item href="#gallery">Галерея</b-nav-item>
                     <b-nav-item href="#contacts">Контакты</b-nav-item>
-                    <div class="align-items-center d-md-flex d-none cursor-pointer" @click="openCart">
+                    <div class="align-items-center d-md-flex d-none cursor-pointer position-relative" id="cart" @click="openCart">
                         <img class="cart-img" src="../assets/img/cart.png" alt="cart">
                         <p class="text-white ml-2">{{cartLength}}</p>
                     </div>
@@ -47,6 +47,11 @@ import Cart from "./Cart";
 export default {
     components: {
         Cart
+    },
+    data() {
+        return {
+            isMobile: false
+        }
     },
     methods: {
         toggleIcons() {
@@ -79,6 +84,20 @@ export default {
                 navbarWrapper.classList.remove("fixed");
             }
         });
+
+        const hideCartBlock = (width) => {
+            if(window.innerWidth < width) {
+                this.isMobile = true;
+            } else {
+                this.isMobile = false;
+            }
+        }
+
+        hideCartBlock(768);
+
+        window.addEventListener('resize', () => {
+            hideCartBlock(768);
+        })
     },
 };
 </script>

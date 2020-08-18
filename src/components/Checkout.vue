@@ -1,6 +1,6 @@
 <template>
-    <div class="checkout">
-        <button class="btn btn-success angle-left" @click="backToCart">Назад</button>
+    <div class="checkout position-relative">
+        <h2 class="back-to-cart animated-arrow cursor-pointer" @click="backToCart">←</h2>
         <h1 class="text-center">Checkout</h1>
         <ul class="checkout__list mb-4 px-2">
             <li class="checkout__list-item d-flex align-items-center justify-content-between mb-2" v-for="(product, idx) in products" :key="idx">
@@ -11,7 +11,10 @@
             </li>
         </ul>
         <h2 class="text-center">Total: <span id="total">{{totalSum}}</span></h2>
-        <button class="btn btn-success angle-right d-block mx-auto">Подтвердить</button>
+        <form>
+            <input type="hidden" :value="JSON.stringify(products)">
+            <button class="btn btn-success angle-right d-block mx-auto" type="submit">Подтвердить</button>
+        </form>
     </div>
 </template>
 
@@ -45,4 +48,8 @@
                 border: 1px solid #4C261B
                 padding: .5rem
                 border-radius: 5px
+
+    .back-to-cart
+        position: absolute
+        left: 5%
 </style>

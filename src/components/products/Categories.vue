@@ -2,11 +2,11 @@
     <section class="container p-5 products" id="products">
         <a class="text-secondary" id="categories-title" href="#products" v-if="isCategory">
             <h1 class="text-center mb-4" @click="backToCategories">
-                <span class="animated-arrow">←</span> Back
+                <span class="animated-arrow">←</span>Back
             </h1>
         </a>
         <a class="text-secondary" id="categories-title" v-else>
-            <h1 class="text-center mb-4">Choose your dessert</h1>
+            <h1 class="text-center mb-4">Desserts</h1>
         </a>
         <div class="categories pt-3">
             <div class="justify-content-center">
@@ -598,7 +598,7 @@ export default {
     text-decoration: none
     h1
         @media (max-width: 992px)
-            font-size: 4rem
+            font-size: 6rem
     &:hover
         color: #4C261B !important
 

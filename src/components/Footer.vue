@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer my-5">
         <Question />
         <div class="footer__content container">
                 <div class="footer__content-links">

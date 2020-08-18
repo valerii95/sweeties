@@ -52,6 +52,7 @@ export default {
                 rows: 2,
                 slidesPerRow: 1,
                 arrows: true,
+                // dots: true,
                 responsive: [
                     {
                         breakpoint: 1400,

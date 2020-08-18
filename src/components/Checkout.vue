@@ -11,9 +11,10 @@
             </li>
         </ul>
         <h2 class="text-center">Total: <span id="total">{{totalSum}}</span></h2>
-        <form>
-            <input type="hidden" :value="JSON.stringify(products)">
-            <button class="btn btn-success angle-right d-block mx-auto" type="submit">Подтвердить</button>
+        <form @submit.prevent="onSubmit">
+            <input id="order" type="hidden" :value="JSON.stringify(products)">
+            <input type="hidden" id="sum" :value="totalSum">
+            <button class="btn btn-secondary angle-right d-block mx-auto" type="submit">Подтвердить</button>
         </form>
     </div>
 </template>
@@ -34,22 +35,30 @@
         methods: {
             backToCart() {
                 this.$emit('backToCart');
+            },
+            onSubmit() {
+                const orderVal = JSON.parse(document.querySelector('#order').value);
+                const totalSum = document.querySelector('#sum').value;
+                alert('Заказ:' + JSON.stringify(orderVal));
+                alert('Сумма:' + totalSum);
             }
         }
     }
 </script>
 
 <style lang="sass">
-    .checkout
-        &__list
-            max-width: 800px
-            margin: 0 auto
-            &-item
-                border: 1px solid #4C261B
-                padding: .5rem
-                border-radius: 5px
 
-    .back-to-cart
-        position: absolute
-        left: 5%
+.checkout
+    transition: .5s all ease-in-out
+    &__list
+        max-width: 800px
+        margin: 0 auto
+        &-item
+            border: 1px solid #4C261B
+            padding: .5rem
+            border-radius: 5px
+
+.back-to-cart
+    position: absolute
+    left: 5%
 </style>

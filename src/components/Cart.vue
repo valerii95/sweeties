@@ -3,7 +3,7 @@
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
             <h1 v-if="products.length" :data-qty="products.length" class="text-center">Cart</h1>
             <h1 v-else class="text-center">Cart is Empty</h1>
-            <img width="50" class="close-img" src="../assets/img/close.png" @click="closeCart">
+            <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
             <div class="cart">
                 <div ref="cartItem" v-for="(product, idx) in products" :key="idx" class="cart-item d-md-flex align-items-center justify-content-between mx-auto px-2 mb-4">
                     <img :src="product.img" :alt="product.title" class="cart__img img-fluid w-md-25 d-md-block d-flex mx-auto">
@@ -14,18 +14,25 @@
                             <p>Quantity: <span ref="qty">{{product.quantity}}</span></p>
                         </div>
                         <div class="d-flex align-items-center">
-                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
+                            <button class="btn p-0 cursor-pointer quantity-counter mb-1" @click="decrementQty(product.title)">-</button>
                             <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
-                            <button class="btn p-0 cursor-pointer quantity-counter" @click="decrementQty(product.title)">-</button>
+                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
                         </div>
                         <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.title)">
                     </div>
                 </div>
             </div>
             <h2 v-if="products.length" class="text-center mb-2">Total: <span id="total">{{totalSum}}</span> mdl</h2>
-            <button v-if="products.length" class="btn btn-primary angle-right d-block mx-auto" @click="checkout()">Checkout</button>
+            <button 
+                v-if="products.length" 
+                class="btn btn-secondary angle-right d-block mx-auto" 
+                @click="checkout()">Checkout
+            </button>
         </div>
-        <Checkout v-if="checkoutPressed" :products="products" @backToCart="backToCart" />
+        <Checkout 
+            v-if="checkoutPressed" 
+            :products="products" 
+            @backToCart="backToCart" />
     </div>
 </template>
 
@@ -46,7 +53,8 @@ export default {
     },
     data() {
         return {
-            checkoutPressed: false
+            checkoutPressed: false,
+            show: false
         }
     },
     methods: {
@@ -94,19 +102,23 @@ export default {
         background-color: rgba(255, 255, 255, .99)
         display: none
         overflow: auto
+        .cart-content
+            transition: .5s all ease-in-out
         .quantity-counter
             font-size: 2rem
             box-shadow: none !important
         .quantity-input
             width: 50px
+            border: 1px solid #4C261B
+            padding-left: 5px
         .close-img
             position: absolute
-            right: 3%
-            top: 3%
+            right: 5%
+            top: 5%
             cursor: pointer
         .cart-item
             max-width: 1100px
             &.removed
                 transition: .4s all ease-in-out
-                transform: translateX(-1500px)
+                transform: translateX(-100%)
 </style>

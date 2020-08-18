@@ -15,7 +15,7 @@
           <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="btn btn-primary angle-left mt-4">Learn more</button>
+          <!-- <button class="btn btn-primary angle-left mt-4">Learn more</button> -->
         </article>
       </div>
     </div>

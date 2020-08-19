@@ -1,5 +1,5 @@
 <template>
-    <div class="faq container px-5" id="contacts">
+    <div class="faq container px-5 pb-5" id="contacts">
         <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
         <form @submit="onSubmit($event)">
             <div class="faq__input">

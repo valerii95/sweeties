@@ -25,11 +25,11 @@
 
             <b-collapse id="nav-text-collapse" is-nav class="justify-content-end">
                 <b-navbar-nav class="position-relative align-items-center">
-                    <b-nav-item href="#home">Главная</b-nav-item>
-                    <b-nav-item href="#about">О Нас</b-nav-item>
-                    <b-nav-item href="#products">Десерты</b-nav-item>
-                    <b-nav-item href="#gallery">Галерея</b-nav-item>
-                    <b-nav-item href="#contacts">Контакты</b-nav-item>
+                    <b-nav-item href="#home">Home</b-nav-item>
+                    <b-nav-item href="#about">About us</b-nav-item>
+                    <b-nav-item href="#products">Desserts</b-nav-item>
+                    <b-nav-item href="#gallery">Gallery</b-nav-item>
+                    <b-nav-item href="#contacts">Contacts</b-nav-item>
                     <div class="align-items-center d-md-flex d-none cursor-pointer position-relative" id="cart" @click="openCart">
                         <img class="cart-img" src="../assets/img/cart.png" alt="cart">
                         <p class="text-white ml-2">{{cartLength}}</p>
@@ -58,7 +58,10 @@ export default {
             this.$refs.social.classList.toggle('disabled');
         },
         openCart() {
-            document.querySelector('.cart-wrapper').style.display = 'block';
+            const cartWrapper = document.querySelector('.cart-wrapper');
+            cartWrapper.style.display = 'block';
+            cartWrapper.style.transform = 'translateX(0)';
+            cartWrapper.style.overflow = 'auto';
             document.body.style.overflow = 'hidden';
         }
     },

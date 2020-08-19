@@ -32,10 +32,10 @@ export default {
         },
         addToCart(product) {
             if(this.isCategory) {
-                // this.$refs.card.classList.add('animate');
-                // setTimeout(() => {
-                //     this.$refs.card.classList.remove('animate');
-                // }, 350);
+                this.$refs.card.classList.add('animate');
+                setTimeout(() => {
+                    this.$refs.card.classList.remove('animate');
+                }, 350);
 
                 let cloneImg = this.$refs.cardImg.cloneNode(true);
                 cloneImg.classList.add("floating", "temp");
@@ -136,8 +136,6 @@ img.floating
         max-width: 300px
         margin: 30px auto
     .img
-        height: 210px
-        width: 100%
         border-bottom-left-radius: 75px
     figcaption
         font-size: 24px

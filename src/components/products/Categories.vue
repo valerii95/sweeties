@@ -41,42 +41,42 @@ export default {
             categories: [
                 {
                     img: require("../../assets/img/products/categories/cake.png"),
-                    title: "Торты",
+                    title: "Cakes",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "cake",
                 },
                 {
                     img: require("../../assets/img/products/categories/bars.png"),
-                    title: "Батончики",
+                    title: "Bars",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "bars",
                 },
                 {
-                    img: require("../../assets/img/products/categories/ace_cream.png"),
-                    title: "Мороженое",
+                    img: require("../../assets/img/products/categories/ice_cream.png"),
+                    title: "Ice-cream",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "ice_cream",
                 },
                 {
                     img: require("../../assets/img/products/categories/curds.png"),
-                    title: "Сырки",
+                    title: "Curds",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "curds",
                 },
                 {
                     img: require("../../assets/img/products/categories/sweets.png"),
-                    title: "Конфеты",
+                    title: "Sweets",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "sweets",
                 },
                 {
                     img: require("../../assets/img/products/categories/sets.png"),
-                    title: "Наборы",
+                    title: "Sets",
                     text:
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                     id: "sets",
@@ -86,8 +86,53 @@ export default {
             products: {
                 cake: [
                     {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты1",
+                        img: require("../../assets/img/products/products/cakes/cake1.png"),
+                        title: "Cake1",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                        price: 100,
+                        quantity: 1
+                    },
+                    {
+                        img: require("../../assets/img/products/products/cakes/cake2.png"),
+                        title: "Cake2",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                        price: 100,
+                        quantity: 1
+                    },
+                    {
+                        img: require("../../assets/img/products/products/cakes/cake3.png"),
+                        title: "Cake3",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                        price: 100,
+                        quantity: 1
+                    },
+                    {
+                        img: require("../../assets/img/products/products/cakes/cake4.png"),
+                        title: "Cake4",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                        price: 100,
+                        quantity: 1
+                    },
+                    {
+                        img: require("../../assets/img/products/products/cakes/cake5.png"),
+                        title: "Cake5",
+                        text:
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                        id: "cake",
+                        price: 100,
+                        quantity: 1
+                    },
+                    {
+                        img: require("../../assets/img/products/products/cakes/cake6.png"),
+                        title: "Cake6",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -96,7 +141,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты2",
+                        title: "Cake7",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -105,7 +150,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты3",
+                        title: "Cake8",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -114,7 +159,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты4",
+                        title: "Cake9",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -123,7 +168,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты5",
+                        title: "Cake10",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -132,7 +177,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты6",
+                        title: "Cake11",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -141,52 +186,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты7",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "cake",
-                        price: 100,
-                        quantity: 1
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты8",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "cake",
-                        price: 100,
-                        quantity: 1
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты9",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "cake",
-                        price: 100,
-                        quantity: 1
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты10",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "cake",
-                        price: 100,
-                        quantity: 1
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты11",
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
-                        id: "cake",
-                        price: 100,
-                        quantity: 1
-                    },
-                    {
-                        img: require("../../assets/img/products/categories/cake.png"),
-                        title: "Торты12",
+                        title: "Cake12",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "cake",
@@ -197,7 +197,7 @@ export default {
                 bars: [
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
+                        title: "Bar",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
@@ -206,7 +206,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
+                        title: "Bar",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
@@ -215,7 +215,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
+                        title: "Bar",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
@@ -224,7 +224,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
+                        title: "Bar",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
@@ -233,7 +233,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/bars.png"),
-                        title: "Батончики",
+                        title: "Bar",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "bars",
@@ -243,8 +243,8 @@ export default {
                 ],
                 ice_cream: [
                     {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое1",
+                        img: require("../../assets/img/products/categories/ice_cream.png"),
+                        title: "Ice-cream1",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
@@ -252,8 +252,8 @@ export default {
                         quantity: 1
                     },
                     {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое2",
+                        img: require("../../assets/img/products/categories/ice_cream.png"),
+                        title: "Ice-cream2",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
@@ -261,8 +261,8 @@ export default {
                         quantity: 1
                     },
                     {
-                        img: require("../../assets/img/products/categories/ace_cream.png"),
-                        title: "Мороженое3",
+                        img: require("../../assets/img/products/categories/ice_cream.png"),
+                        title: "Ice-cream3",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "ice_cream",
@@ -273,7 +273,7 @@ export default {
                 curds: [
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -282,7 +282,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -291,7 +291,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -300,7 +300,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -309,7 +309,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -318,7 +318,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -327,7 +327,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/curds.png"),
-                        title: "Сырки",
+                        title: "Curds",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "curds",
@@ -338,7 +338,7 @@ export default {
                 sweets: [
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -347,7 +347,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -356,7 +356,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -365,7 +365,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -374,7 +374,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -383,7 +383,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sweets.png"),
-                        title: "Конфеты",
+                        title: "Sweets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sweets",
@@ -394,7 +394,7 @@ export default {
                 sets: [
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
@@ -403,7 +403,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
@@ -412,7 +412,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
@@ -421,7 +421,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
@@ -430,7 +430,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",
@@ -439,7 +439,7 @@ export default {
                     },
                     {
                         img: require("../../assets/img/products/categories/sets.png"),
-                        title: "Наборы",
+                        title: "Sets",
                         text:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
                         id: "sets",

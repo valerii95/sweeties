@@ -1,8 +1,8 @@
 <template>
     <div class="cart-wrapper py-4" ref="cart">
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
-            <h1 v-if="products.length" :data-qty="products.length" class="text-center">Cart</h1>
-            <h1 v-else class="text-center">Cart is Empty</h1>
+            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading mt-3">Cart</h1>
+            <h1 v-else class="text-center cart__heading mt-3">Cart is Empty</h1>
             <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
             <div class="cart">
                 <div ref="cartItem" v-for="(product, idx) in products" :key="idx" class="cart-item d-md-flex align-items-center justify-content-between mx-auto px-2 mb-4">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
             </div>
-            <h2 v-if="products.length" class="text-center mb-2">Total: <span id="total">{{totalSum}}</span> mdl</h2>
+            <h2 v-if="products.length" class="text-center mb-2 total-price">Total: <span id="total">{{totalSum}}</span> mdl</h2>
             <button 
                 v-if="products.length" 
                 class="btn btn-secondary angle-right d-block mx-auto" 
@@ -66,7 +66,8 @@ export default {
             }, 400);
         },
         closeCart() {
-            this.$refs.cart.style.display = 'none';
+            this.$refs.cart.style.transform = 'translateX(-110%)';
+            this.$refs.cart.style.overflow = 'hidden';
             document.body.style.overflow = 'visible';
         },
         incrementQty(title) {
@@ -79,10 +80,18 @@ export default {
             this.$store.dispatch('setQty', [Number(e.target.value), title]);
         },
         checkout() {
-            this.checkoutPressed = true;
+            this.$refs.cart.style.transform = 'translateX(-110%)';
+            setTimeout(() => {
+                this.checkoutPressed = true;
+                this.$refs.cart.style.transform = 'translateX(0)';
+            }, 250);
         },
         backToCart() {
-            this.checkoutPressed = false;
+            this.$refs.cart.style.transform = 'translateX(-110%)';
+            setTimeout(() => {
+                this.checkoutPressed = false;
+                this.$refs.cart.style.transform = 'translateX(0)';
+            }, 250);
         }
     },
     
@@ -100,8 +109,17 @@ export default {
         box-shadow: 5px -5px 5px 0px rgba(0,0,0,0.75)
         z-index: 100
         background-color: rgba(255, 255, 255, .99)
-        display: none
+        transform: translateX(-110%)
         overflow: auto
+        transition: .25s all ease-in-out
+        .cart__heading
+            @media (max-width: 700px)
+                font-size: 5rem
+                max-width: 80%
+                margin: 0 auto
+        .total-price
+            @media (max-width: 700px)
+                font-size: 4rem
         .cart-content
             transition: .5s all ease-in-out
         .quantity-counter
@@ -113,8 +131,8 @@ export default {
             padding-left: 5px
         .close-img
             position: absolute
-            right: 5%
-            top: 5%
+            right: 3%
+            top: 2%
             cursor: pointer
         .cart-item
             max-width: 1100px

@@ -1,7 +1,7 @@
 <template>
     <div class="checkout position-relative">
         <h2 class="back-to-cart animated-arrow cursor-pointer" @click="backToCart">←</h2>
-        <h1 class="text-center">Checkout</h1>
+        <h1 class="text-center checkout__heading">Checkout</h1>
         <ul class="checkout__list mb-4 px-2">
             <li class="checkout__list-item d-flex align-items-center justify-content-between mb-2" v-for="(product, idx) in products" :key="idx">
                 <img width="50" class="img-fluid" :src="product.img" :alt="product.title">
@@ -10,11 +10,11 @@
                 <p>Qty: {{product.quantity}}</p>
             </li>
         </ul>
-        <h2 class="text-center">Total: <span id="total">{{totalSum}}</span></h2>
+        <h2 class="text-center total-price">Total: <span id="total">{{totalSum}}</span></h2>
         <form @submit.prevent="onSubmit">
             <input id="order" type="hidden" :value="JSON.stringify(products)">
             <input type="hidden" id="sum" :value="totalSum">
-            <button class="btn btn-secondary angle-right d-block mx-auto" type="submit">Подтвердить</button>
+            <button class="btn btn-secondary angle-right d-block mx-auto" type="submit">Apply Order</button>
         </form>
     </div>
 </template>
@@ -37,10 +37,7 @@
                 this.$emit('backToCart');
             },
             onSubmit() {
-                const orderVal = JSON.parse(document.querySelector('#order').value);
-                const totalSum = document.querySelector('#sum').value;
-                alert('Заказ:' + JSON.stringify(orderVal));
-                alert('Сумма:' + totalSum);
+                alert('Thank you for order, we will call you in a moment!!! ❤️❤️❤️')
             }
         }
     }
@@ -50,6 +47,9 @@
 
 .checkout
     transition: .5s all ease-in-out
+    &__heading
+        @media (max-width: 700px)
+            font-size: 5rem
     &__list
         max-width: 800px
         margin: 0 auto
@@ -61,4 +61,6 @@
 .back-to-cart
     position: absolute
     left: 5%
+    @media (max-width: 700px)
+        font-size: 4rem
 </style>

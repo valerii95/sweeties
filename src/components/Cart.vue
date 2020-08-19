@@ -1,7 +1,7 @@
 <template>
     <div class="cart-wrapper py-4" ref="cart">
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
-            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading mt-3">Cart</h1>
+            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading my-3">Cart</h1>
             <h1 v-else class="text-center cart__heading mt-3">Cart is Empty</h1>
             <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
             <div class="cart">
@@ -77,6 +77,9 @@ export default {
             this.$store.dispatch('decrementQty', title);
         },
         setQty(e, title) {
+            if(Number(e.target.value) < 0) {
+                e.target.value = 0;
+            }
             this.$store.dispatch('setQty', [Number(e.target.value), title]);
         },
         checkout() {

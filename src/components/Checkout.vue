@@ -1,8 +1,8 @@
 <template>
     <div ref="checkout" class="checkout position-relative">
-        <div v-if="successOrdered" class="d-flex flex-column">
-            <h2 class="text-center">Thank You For Order!!!</h2>
-            <img width="100" class="img img-fluid mx-auto" src="../assets/img/heart.svg" alt="">
+        <div v-if="successOrdered" class="d-flex flex-column justify-content-center success-order">
+            <h2 class="text-center">Thank You For Your Order</h2>
+            <img width="100" class="img img-fluid mx-auto animated-heart mt-4" src="../assets/img/heart.svg" alt="">
         </div>
         <div v-else>
             <h2 class="back-to-cart animated-arrow cursor-pointer" @click="backToCart">←</h2>
@@ -49,16 +49,21 @@
             backToCart() {
                 this.$emit('backToCart');
             },
-            showThanksModal() {
+            showThanksModal(isCorrect) {
                 this.$store.dispatch('showThanksModal');
             },
             onSubmit() {
                 let val = document.querySelector('#checkout-input').value;
                 const regex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
                 if(val.match(regex) && val.length >= 8) {
-                    this.showThanksModal();
+                    const cartWrapper = document.querySelector('.cart-wrapper');
+                    cartWrapper.style.transform = 'translateX(-110%)';
+                    setTimeout(() => {
+                        cartWrapper.style.transform = 'translateX(0)';
+                        this.showThanksModal();
+                    }, 500);
                 } else {
-                    alert('Something went wrong');
+                    alert('Please Check Your Number');
                     document.querySelector('#checkout-input').value = '';
                 }
             },
@@ -67,9 +72,21 @@
 </script>
 
 <style lang="sass">
+@keyframes animated-heart
+    0%
+        transform: scale(2)
+    50%
+        transform: scale(1)
+    100%
+        transform: scale(2)
 
 .checkout
     transition: .5s all ease-in-out
+    height: 100%
+    .success-order
+        height: 100%
+    .animated-heart
+        animation: animated-heart 1.75s infinite
     &__heading
         @media (max-width: 700px)
             font-size: 5rem

@@ -21,7 +21,7 @@
                         </div>
                         <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.title)">
                     </div>
-                    <p class="mb-3 px-2">{{product.title}}</p>
+                    <p class="cart-item__title mb-3 px-2">{{product.title}}</p>
                 </div>
             </div>
             <h2 v-if="products.length" class="text-center mb-2 total-price">Total: <span id="total">{{totalSum}}</span> mdl</h2>
@@ -72,7 +72,9 @@ export default {
             this.$refs.cart.style.overflow = 'hidden';
             document.body.style.overflow = 'visible';
             this.$store.dispatch('closeCart');
-            this.checkoutPressed = false;
+            if(!this.totalSum) {
+                this.checkoutPressed = false;
+            }
         },
         incrementQty(title) {
             this.$store.dispatch('incrementQty', title);
@@ -143,6 +145,9 @@ export default {
             z-index: 2
         .cart-item
             max-width: 1100px
+            &__title
+                font-size: 1.25rem
+                line-height: 1
             &.removed
                 transition: .4s all ease-in-out
                 transform: translateX(-100%)

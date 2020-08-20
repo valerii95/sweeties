@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    products: navigator.cookieEnabled ? JSON.parse(localStorage.getItem('products')) || [] : []
+    products: navigator.cookieEnabled ? JSON.parse(localStorage.getItem('products')) || [] : [],
+    successOrdered: false
   },
   mutations: {
     addToCart(state, product) {
@@ -41,6 +42,16 @@ export default new Vuex.Store({
     setQty(state, args) {
       let productIdx = state.products.map(el => el.title).indexOf(args[1]);
       state.products[productIdx]['quantity'] = args[0];
+    },
+    showThanksModal(state) {
+      state.products = state.products.forEach(product => {
+        product.quantity = 1;
+      });
+      state.products = [];
+      state.successOrdered = true;
+    },
+    closeCart(state) {
+      state.successOrdered = false;
     }
   },
   actions: {
@@ -64,6 +75,13 @@ export default new Vuex.Store({
       context.commit('setQty', args);
       context.commit('isCookiesEnabled');
     },
+    showThanksModal(context) {
+      context.commit('showThanksModal');
+      context.commit('isCookiesEnabled');
+    },
+    closeCart(context) {
+      context.commit('closeCart');
+    }
   },
   getters: {
     products(state) {
@@ -77,6 +95,9 @@ export default new Vuex.Store({
       });
 
       return counter;
+    },
+    successOrdered(state) {
+      return state.successOrdered;
     }
   }
 })

@@ -1,25 +1,27 @@
 <template>
     <div class="cart-wrapper py-4" ref="cart">
+        <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
-            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading my-3">Cart</h1>
-            <h1 v-else class="text-center cart__heading mt-3">Cart is Empty</h1>
-            <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
+            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading">Cart</h1>
+            <h1 v-else class="text-center cart__heading">Cart is Empty</h1>
             <div class="cart">
-                <div ref="cartItem" v-for="(product, idx) in products" :key="idx" class="cart-item d-md-flex align-items-center justify-content-between mx-auto px-2 mb-4">
-                    <img :src="product.img" :alt="product.title" class="cart__img img-fluid w-md-25 d-md-block d-flex mx-auto">
-                    <div class="mt-2 mt-md-0 ml-md-3 d-flex flex-wrap justify-content-between align-items-center w-md-75">
-                        <div class="w-md-50 justify-content-between align-items-center d-md-flex">
-                            <p>{{product.title}}</p>
-                            <p>{{product.price}} mdl</p>
-                            <p>Quantity: <span ref="qty">{{product.quantity}}</span></p>
+                <div ref="cartItem" class="cart-item" v-for="(product, idx) in products" :key="idx">
+                    <div class="d-flex align-items-center justify-content-between mx-auto px-2 mb-1 w-100">
+                        <div class="w-md-25 w-50 position-relative">
+                            <img :src="product.img" :alt="product.title" class="cart__img img-fluid d-md-block d-flex">
                         </div>
-                        <div class="d-flex align-items-center">
-                            <button class="btn p-0 cursor-pointer quantity-counter mb-1" @click="decrementQty(product.title)">-</button>
-                            <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
-                            <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
+                        <div class="d-md-flex align-items-center w-md-75 justify-content-around mx-2 w-50 text-center">
+                            <p class="mb-1">{{product.price}} mdl</p>
+                            <p class="mb-1">Quantity: <span ref="qty">{{product.quantity}}</span></p>
+                            <div>
+                                <button class="btn p-0 cursor-pointer quantity-counter mb-1" @click="decrementQty(product.title)">-</button>
+                                <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
+                                <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
+                            </div>
                         </div>
                         <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.title)">
                     </div>
+                    <p class="mb-3 px-2">{{product.title}}</p>
                 </div>
             </div>
             <h2 v-if="products.length" class="text-center mb-2 total-price">Total: <span id="total">{{totalSum}}</span> mdl</h2>
@@ -31,7 +33,7 @@
         </div>
         <Checkout 
             v-if="checkoutPressed" 
-            :products="products" 
+            :products="products"
             @backToCart="backToCart" />
     </div>
 </template>
@@ -54,7 +56,7 @@ export default {
     data() {
         return {
             checkoutPressed: false,
-            show: false
+            show: false,
         }
     },
     methods: {
@@ -69,6 +71,8 @@ export default {
             this.$refs.cart.style.transform = 'translateX(-110%)';
             this.$refs.cart.style.overflow = 'hidden';
             document.body.style.overflow = 'visible';
+            this.$store.dispatch('closeCart');
+            this.checkoutPressed = false;
         },
         incrementQty(title) {
             this.$store.dispatch('incrementQty', title);
@@ -97,7 +101,6 @@ export default {
             }, 250);
         }
     },
-    
 };
 </script>
 
@@ -134,9 +137,10 @@ export default {
             padding-left: 5px
         .close-img
             position: absolute
-            right: 3%
-            top: 2%
+            right: 10px
+            top: 10px
             cursor: pointer
+            z-index: 2
         .cart-item
             max-width: 1100px
             &.removed

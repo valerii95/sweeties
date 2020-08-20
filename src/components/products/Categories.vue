@@ -621,6 +621,8 @@ export default {
         opacity: 0
 .categories
     position: relative
+    .slick-slide div:first-child
+        margin: 0 1px
     .back-btn
         position: absolute
         top: 0
@@ -633,8 +635,9 @@ export default {
     display: flex
     justify-content: center
     flex-wrap: wrap
+    padding: 0
     li
-        margin: 0 5px
+        margin: 0 5px 5px 5px
         cursor: pointer
         width: 10px
         height: 10px

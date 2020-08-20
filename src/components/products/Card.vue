@@ -8,7 +8,7 @@
             </figure>
             <div class="d-flex justify-content-between">
                 <p class="ml-4 card__price" v-if="category.price">{{category.price}} mdl</p>
-                <button class="btn btn-success ml-auto px-0" @click="addToCart(category)"></button>
+                <button class="btn btn-secondary ml-auto px-0" @click="addToCart(category)"></button>
             </div>
         </article>
     </div>

@@ -3,7 +3,7 @@
         <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
         <form @submit="onSubmit($event)">
             <div class="faq__input">
-                <input type="number" id="number-input" class="text-secondary">
+                <input type="tel" id="number-input" class="text-secondary" placeholder="+373 60 246 366">
                 <button type="submit" name="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
             </div>
         </form>
@@ -14,10 +14,16 @@
 export default {
     methods: {
         onSubmit(e) {
-          e.preventDefault();
-          alert(document.querySelector('#number-input').value);
-          document.querySelector('#number-input').value = '';
-      }
+            e.preventDefault();
+            let val = document.querySelector('#number-input').value;
+            const regex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
+            if(val.match(regex) && val.length >= 8) {
+                alert('Thank you for order we will call you, right back!');
+            } else {
+                alert('Something went wrong');
+                document.querySelector('#number-input').value = '';
+            }
+        },
     }
 };
 </script>
@@ -49,7 +55,7 @@ export default {
             input
                 width: 100%
                 border-radius: 30px
-                box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.1)
+                box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.5)
                 appearance: none
                 outline: none
                 border: none

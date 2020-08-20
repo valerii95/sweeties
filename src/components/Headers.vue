@@ -11,7 +11,7 @@
                         >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                     <a href="#products">
-                        <button class="btn btn-primary mt-4 angle-right">Go to catalog</button>
+                        <button class="btn btn-secondary mt-4 angle-right">Go to catalog</button>
                     </a>
                 </article>
                 <div class="col-6 index-1 header__cake">

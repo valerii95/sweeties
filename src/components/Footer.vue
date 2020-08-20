@@ -1,5 +1,5 @@
 <template>
-    <div class="footer my-5">
+    <footer class="footer mt-5">
         <Question />
         <div class="footer__content container">
                 <div class="footer__content-links">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
         </div>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -70,20 +70,6 @@ export default {
 .footer
     position: relative
     overflow: hidden
-    &::after
-        position: absolute
-        content: ''
-        right: -35%
-        bottom: -15%
-        height: 90%
-        width: 60%
-        border-radius: 50%
-        background: #76AF3C
-        transform: rotate(-45deg)
-        z-index: -1
-        @media (max-width: 800px)
-            transform: rotate(60deg)
-            bottom: -30%
     &__content
         max-width: 800px !important
         margin: 0 auto

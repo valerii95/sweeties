@@ -1,7 +1,7 @@
 <template>
     <div class="faq container px-5 pb-5" id="contacts">
         <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
-        <form @submit="onSubmit($event)">
+        <form action="mail.php" method="POST">
             <div class="faq__input">
                 <input type="tel" id="number-input" class="text-secondary" placeholder="+373 60 246 366">
                 <button type="submit" name="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
@@ -13,17 +13,17 @@
 <script>
 export default {
     methods: {
-        onSubmit(e) {
-            e.preventDefault();
-            let val = document.querySelector('#number-input').value;
-            const regex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
-            if(val.match(regex) && val.length >= 8) {
-                alert('Thank you for order we will call you, right back!');
-            } else {
-                alert('Something went wrong');
-                document.querySelector('#number-input').value = '';
-            }
-        },
+        // onSubmit(e) {
+        //     e.preventDefault();
+        //     let val = document.querySelector('#number-input').value;
+        //     const regex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
+        //     if(val.match(regex) && val.length >= 8) {
+        //         alert('Thank you for order we will call you, right back!');
+        //     } else {
+        //         alert('Something went wrong');
+        //         document.querySelector('#number-input').value = '';
+        //     }
+        // },
     }
 };
 </script>

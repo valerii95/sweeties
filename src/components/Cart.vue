@@ -5,7 +5,7 @@
             <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading">Cart</h1>
             <h1 v-else class="text-center cart__heading">Cart is Empty</h1>
             <div class="cart">
-                <div ref="cartItem" class="cart-item" v-for="(product, idx) in products" :key="idx">
+                <div ref="cartItem" class="cart-item mx-auto" v-for="(product, idx) in products" :key="idx">
                     <div class="d-flex align-items-center justify-content-between mx-auto px-2 mb-1 w-100">
                         <div class="w-md-25 w-50 position-relative">
                             <img :src="product.img" :alt="product.title" class="cart__img img-fluid d-md-block d-flex">

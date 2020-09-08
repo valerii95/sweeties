@@ -528,8 +528,6 @@ export default {
         showActiveSlide() {
             const customDots = document.querySelector('.customDots');
 
-            
-
             if(window.innerWidth < 1200) {
                 let slides = document.querySelectorAll('.categories .slick-slide');
 

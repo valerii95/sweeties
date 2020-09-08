@@ -7,32 +7,32 @@
                         <img src="../assets/img/footer/logo.png" alt />
                     </a>
                     <div class="footer__content-list">
-                        <h3>Links</h3>
+                        <h3>{{ $t('footer.links') }}</h3>
                         <div class="footer-links">
                             <ul>
                                 <li>
-                                    <a class="link" href="#home">Home</a>
+                                    <a class="link" href="#home">{{ $t('navbar.home') }}</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#about">About</a>
+                                    <a class="link" href="#about">{{ $t('navbar.about') }}</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#products">Products</a>
+                                    <a class="link" href="#products">{{ $t('navbar.desserts') }}</a>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <a class="link" href="#gallery">Gallery</a>
+                                    <a class="link" href="#gallery">{{ $t('navbar.gallery') }}</a>
                                 </li>
                                 <li>
-                                    <a class="link" href="#contacts">Contacts</a>
+                                    <a class="link" href="#contacts">{{ $t('navbar.contacts') }}</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h3>Contact Us</h3>
+                    <h3>{{ $t('footer.contactUs') }}</h3>
                     <div class="footer-links">
                         <ul>
                             <li>

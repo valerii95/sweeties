@@ -1,7 +1,7 @@
 <template>
     <div ref="checkout" class="checkout position-relative">
         <div v-if="successOrdered" class="d-flex flex-column justify-content-center success-order">
-            <h2 class="text-center">Thank You For Your Order</h2>
+            <h2 class="text-center">{{ $t('checkout.thanks') }}</h2>
             <img
                 width="100"
                 class="img img-fluid mx-auto animated-heart mt-4"
@@ -11,7 +11,7 @@
         </div>
         <div v-else>
             <h2 class="back-to-cart animated-arrow cursor-pointer" @click="backToCart">←</h2>
-            <h1 class="text-center checkout__heading">Checkout</h1>
+            <h1 class="text-center checkout__heading">{{ $t('checkout.heading') }}</h1>
             <ul class="checkout__list mb-4 px-2">
                 <li
                     class="checkout__list-item d-flex align-items-center justify-content-between mb-2"
@@ -21,11 +21,11 @@
                     <img width="50" class="img-fluid" :src="product.img" :alt="product.title" />
                     <p>{{product.title}}</p>
                     <p>{{product.price}} mdl</p>
-                    <p>Qty: {{product.quantity}}</p>
+                    <p>{{ $t('checkout.qty') }}: {{product.quantity}}</p>
                 </li>
             </ul>
             <h2 class="text-center total-price">
-                Total:
+                {{ $t('checkout.total') }}:
                 <span id="total">{{totalSum}}</span>
             </h2>
             <form @submit.prevent="onSubmit">
@@ -38,7 +38,7 @@
                 />
                 <input name="sum" ref="sum" type="hidden" id="sum" :value="totalSum" />
                 <div class="d-flex flex-column align-items-center mb-3 px-2">
-                    <label for="checkout-input" class="cursor-pointer">Please enter your number</label>
+                    <label for="checkout-input" class="cursor-pointer">{{ $t('checkout.number') }}</label>
                     <input
                         ref="phone"
                         type="tel"
@@ -51,7 +51,7 @@
                 <button
                     class="btn btn-secondary angle-right d-block mx-auto"
                     type="submit"
-                >Apply Order</button>
+                >{{ $t('checkout.button') }}</button>
             </form>
         </div>
     </div>

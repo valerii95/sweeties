@@ -11,10 +11,8 @@
           />
         </div>
         <article class="col-xs-12 col-md-6 col-xxl-5 blur">
-          <h1 class="mb-3 about__heading">Basic principles of work</h1>
-          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h1 class="mb-3 about__heading">{{ $t('about.heading') }}</h1>
+          <p class="text">{{ $t('about.text') }}</p>
           <!-- <button class="btn btn-primary angle-left mt-4">Learn more</button> -->
         </article>
       </div>

@@ -25,15 +25,16 @@
 
             <b-collapse id="nav-text-collapse" is-nav class="justify-content-end">
                 <b-navbar-nav class="position-relative align-items-center">
-                    <b-nav-item href="#home">Home</b-nav-item>
-                    <b-nav-item href="#about">About us</b-nav-item>
-                    <b-nav-item href="#products">Desserts</b-nav-item>
-                    <b-nav-item href="#gallery">Gallery</b-nav-item>
-                    <b-nav-item href="#contacts">Contacts</b-nav-item>
+                    <b-nav-item href="#home">{{ $t('navbar.home') }}</b-nav-item>
+                    <b-nav-item href="#about">{{ $t('navbar.about') }}</b-nav-item>
+                    <b-nav-item href="#products">{{ $t('navbar.desserts') }}</b-nav-item>
+                    <b-nav-item href="#gallery">{{ $t('navbar.gallery') }}</b-nav-item>
+                    <b-nav-item href="#contacts">{{ $t('navbar.contacts') }}</b-nav-item>
                     <div class="align-items-center d-md-flex d-none cursor-pointer position-relative" id="cart" @click="openCart">
                         <img class="cart-img" src="../assets/img/cart.png" alt="cart">
                         <p class="text-white ml-2">{{cartLength}}</p>
                     </div>
+                    <LocaleSwitcher />
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -43,10 +44,12 @@
 
 <script>
 import Cart from "./Cart";
+import LocaleSwitcher from './LocaleSwitcher'
 
 export default {
     components: {
-        Cart
+        Cart,
+        LocaleSwitcher
     },
     data() {
         return {

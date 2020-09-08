@@ -5,13 +5,13 @@
             <div class="row align-items-center">
                 <article class="col-auto mr-auto index-1 header__content">
                     <div class="blur">
-                        <h1 class="title">Vegan Deserts</h1>
+                        <h1 class="title">{{ $t('header.heading') }}</h1>
                         <p
                             class="text"
-                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        >{{ $t('header.text') }}</p>
                     </div>
                     <a href="#products">
-                        <button class="btn btn-secondary mt-4 angle-right">Go to catalog</button>
+                        <button class="btn btn-secondary mt-4 angle-right">{{ $t('header.button') }}</button>
                     </a>
                 </article>
                 <div class="col-6 index-1 header__cake">

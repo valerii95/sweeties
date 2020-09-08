@@ -2,8 +2,8 @@
     <div class="cart-wrapper py-4" ref="cart">
         <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
-            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading">Cart</h1>
-            <h1 v-else class="text-center cart__heading">Cart is Empty</h1>
+            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading">{{ $t('cart.cartEmpty') }}</h1>
+            <h1 v-else class="text-center cart__heading">{{ $t('cart.heading') }}</h1>
             <div class="cart">
                 <div ref="cartItem" class="cart-item mx-auto" v-for="(product, idx) in products" :key="idx">
                     <div class="d-flex align-items-center justify-content-between mx-auto px-2 mb-1 w-100">
@@ -12,7 +12,7 @@
                         </div>
                         <div class="d-md-flex align-items-center w-md-75 justify-content-around mx-2 w-50 text-center">
                             <p class="mb-1">{{product.price}} mdl</p>
-                            <p class="mb-1">Quantity: <span ref="qty">{{product.quantity}}</span></p>
+                            <p class="mb-1">{{ $t('cart.qty') }}: <span ref="qty">{{product.quantity}}</span></p>
                             <div>
                                 <button class="btn p-0 cursor-pointer quantity-counter mb-1" @click="decrementQty(product.title)">-</button>
                                 <input type="number" class="mx-2 quantity-input" :value="product.quantity" @input="setQty($event, product.title)">
@@ -24,11 +24,11 @@
                     <p class="cart-item__title mb-3 px-2">{{product.title}}</p>
                 </div>
             </div>
-            <h2 v-if="products.length" class="text-center mb-2 total-price">Total: <span id="total">{{totalSum}}</span> mdl</h2>
+            <h2 v-if="products.length" class="text-center mb-2 total-price">{{ $t('cart.total') }}: <span id="total">{{totalSum}}</span> mdl</h2>
             <button 
                 v-if="products.length" 
                 class="btn btn-secondary angle-right d-block mx-auto" 
-                @click="checkout()">Checkout
+                @click="checkout()">{{ $t('cart.button') }}
             </button>
         </div>
         <Checkout 

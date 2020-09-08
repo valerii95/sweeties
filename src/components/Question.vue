@@ -1,10 +1,10 @@
 <template>
     <div class="faq container px-5 pb-5" id="contacts">
-        <h1 class="text-center mb-5 faq__heading mx-auto">Have Qestion in mind? Let us help you</h1>
+        <h1 class="text-center mb-5 faq__heading mx-auto">{{ $t('faq.heading') }}</h1>
         <form action="mail.php" method="POST">
             <div class="faq__input">
                 <input type="tel" id="number-input" class="text-secondary" placeholder="+373 60 246 366">
-                <button type="submit" name="submit" class="faq__input-send btn btn-secondary angle-right">Send</button>
+                <button type="submit" name="submit" class="faq__input-send btn btn-secondary angle-right">{{ $t('faq.button') }}</button>
             </div>
         </form>
     </div>

@@ -2,11 +2,11 @@
     <section class="container p-5 products" id="products">
         <a class="text-secondary" id="categories-title" href="#products" v-if="isCategory">
             <h1 class="text-center mb-4" @click="backToCategories">
-                <span class="animated-arrow">←</span>Back
+                <span class="animated-arrow">←</span>{{ $t('desserts.back') }}
             </h1>
         </a>
         <a class="text-secondary" id="categories-title" v-else>
-            <h1 class="text-center mb-4">Desserts</h1>
+            <h1 class="text-center mb-4">{{ $t('desserts.heading') }}</h1>
         </a>
         <div class="categories pt-3">
             <div class="justify-content-center">
@@ -41,9 +41,8 @@ export default {
             categories: [
                 {
                     img: require("../../assets/img/products/categories/cake.png"),
-                    title: "Cakes",
-                    text:
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua.",
+                    title: this.$t('categories.cakes'),
+                    text: this.$t('categories.cakesText'),
                     id: "cake",
                 },
                 {

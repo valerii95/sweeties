@@ -1,0 +1,52 @@
+{
+  "header": {
+    "heading": "Vegan Deserts",
+    "text": "Our best super mega desserts",
+    "button": "Go to catalog"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About us",
+    "desserts": "Desserts",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
+  },
+  "about": {
+    "heading": "Basic principles of work",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "desserts": {
+    "heading": "Desserts",
+    "back": "Back"
+  },
+  "categories": {
+    "cakes": "Cakes",
+    "cakesText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+  },
+  "gallery": {
+    "heading": "Gallery"
+  },
+  "faq": {
+    "heading": "Have Qestion in mind? Let us help you",
+    "button": "Send"
+  },
+  "footer": {
+    "links": "Links",
+    "contactUs": "Contact Us"
+  },
+  "cart": {
+    "heading": "Cart",
+    "qty": "Quantity",
+    "cartEmpty": "Cart is Empty",
+    "total": "Total",
+    "button": "Checkout"
+  },
+  "checkout": {
+    "heading": "Checkout",
+    "total": "Total",
+    "number": "Please enter your number",
+    "button": "Apply Order",
+    "thanks": "Thank You For Your Order",
+    "qty": "Qty"
+  }
+}

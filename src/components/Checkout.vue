@@ -11,7 +11,7 @@
         </div>
         <div v-else>
             <h2 class="back-to-cart animated-arrow cursor-pointer" @click="backToCart">←</h2>
-            <h1 class="text-center checkout__heading">{{ $t('checkout.heading') }}</h1>
+            <h2 class="text-center checkout__heading mb-4">{{ $t('checkout.heading') }}</h2>
             <ul class="checkout__list mb-4 px-2">
                 <li
                     class="checkout__list-item d-flex align-items-center justify-content-between mb-2"
@@ -25,8 +25,8 @@
                 </li>
             </ul>
             <h2 class="text-center total-price">
-                {{ $t('checkout.total') }}:
-                <span id="total">{{totalSum}}</span>
+                {{ $t('checkout.total') }}
+                <span id="total"> : {{totalSum}}</span>
             </h2>
             <form @submit.prevent="onSubmit">
                 <input
@@ -144,9 +144,6 @@ export default {
         height: 100%
     .animated-heart
         animation: animated-heart 1.75s infinite
-    &__heading
-        @media (max-width: 700px)
-            font-size: 5rem
     &__list
         max-width: 800px
         margin: 0 auto
@@ -156,8 +153,8 @@ export default {
             border-radius: 5px
 
 .back-to-cart
-    position: absolute
-    left: 5%
+    margin-top: -40px
+    margin-left: 5%
     @media (max-width: 700px)
         font-size: 4rem
 #checkout-input

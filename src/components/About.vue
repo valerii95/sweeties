@@ -11,7 +11,7 @@
           />
         </div>
         <article class="col-xs-12 col-md-6 col-xxl-5 blur">
-          <h1 class="mb-3 about__heading">{{ $t('about.heading') }}</h1>
+          <h2 class="mb-3 about__heading">{{ $t('about.heading') }}</h2>
           <p class="text">{{ $t('about.text') }}</p>
           <!-- <button class="btn btn-primary angle-left mt-4">Learn more</button> -->
         </article>
@@ -66,11 +66,11 @@ export default {
     align-items: center
     overflow: hidden
     padding-bottom: 2rem
-    &__heading
-      @media (max-width: 767px)
-        font-size: 7rem
-        margin-top: 1rem
-        line-height: .7
+    // &__heading
+    //   @media (max-width: 767px)
+    //     font-size: 7rem
+    //     margin-top: 1rem
+    //     line-height: .7
   .text
     @media(min-width: 1200px)
       max-width: 430px

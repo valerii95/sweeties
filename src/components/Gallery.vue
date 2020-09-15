@@ -1,6 +1,6 @@
 <template>
     <section class="container gallery" id="gallery">
-        <h1 class="text-center mb-4">{{ $t('gallery.heading') }}</h1>
+        <h2 class="text-center mb-4">{{ $t('gallery.heading') }}</h2>
         <div class="justify-content-center position-relative">
             <!-- <button id="gallery-prev"><img :src="require('../assets/img/gallery/prev-arrow.png')" alt=""></button> -->
             <VueSlickCarousel v-bind="sliderSettings">
@@ -31,20 +31,6 @@ export default {
     },
     data() {
         return {
-            gallery: [
-                {img : require("../assets/img/gallery/g1.png"), description: 'Super1 Super1 Super1 Super1'},
-                {img : require("../assets/img/gallery/g2.png"), description: 'Super2 Super2 Super2 Super2'},
-                {img : require("../assets/img/gallery/g3.png"), description: 'Super3 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g4.png"), description: 'Super4 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g5.png"), description: 'Super5 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g6.png"), description: 'Super6 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g1.png"), description: 'Super7 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g2.png"), description: 'Super8 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g3.png"), description: 'Super9 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g4.png"), description: 'Super10 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g5.png"), description: 'Super11 Super3 Super3 Super3'},
-                {img : require("../assets/img/gallery/g6.png"), description: 'Super12 Super3 Super3 Super3'},
-            ],
             sliderSettings: {
                 infinite: true,
                 slidesToShow: 3,
@@ -73,6 +59,24 @@ export default {
 
             },
         };
+    },
+    computed: {
+        gallery() {
+            return [
+                {img : require("../assets/img/gallery/g1.png"), description: this.$t('gallery.description')[0]},
+                {img : require("../assets/img/gallery/g2.png"), description: this.$t('gallery.description')[1]},
+                {img : require("../assets/img/gallery/g3.png"), description: this.$t('gallery.description')[2]},
+                {img : require("../assets/img/gallery/g4.png"), description: this.$t('gallery.description')[3]},
+                {img : require("../assets/img/gallery/g5.png"), description: this.$t('gallery.description')[4]},
+                {img : require("../assets/img/gallery/g6.png"), description: this.$t('gallery.description')[5]},
+                {img : require("../assets/img/gallery/g1.png"), description: this.$t('gallery.description')[6]},
+                {img : require("../assets/img/gallery/g2.png"), description: this.$t('gallery.description')[7]},
+                {img : require("../assets/img/gallery/g3.png"), description: this.$t('gallery.description')[8]},
+                {img : require("../assets/img/gallery/g4.png"), description: this.$t('gallery.description')[9]},
+                {img : require("../assets/img/gallery/g5.png"), description: this.$t('gallery.description')[10]},
+                {img : require("../assets/img/gallery/g6.png"), description: this.$t('gallery.description')[11]},
+            ]
+        }
     },
     methods: {
         overImg(e) {

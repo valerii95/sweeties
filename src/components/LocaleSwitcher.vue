@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ul>
+        <ul class="switcher">
             <li v-for="locale in locales" :key="locale" @click="switchLocale(locale)">
                 {{locale}}
             </li>
@@ -26,5 +26,10 @@ export default {
 </script>
 
 <style lang="scss">
-
+    .switcher {
+        list-style: none;
+        li {
+            cursor: pointer;
+        }
+    }
 </style>

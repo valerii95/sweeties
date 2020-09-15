@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   mutations: {
     addToCart(state, product) {
-      let productIdx = state.products.map(el => el.title).indexOf(product.title);
+      let productIdx = state.products.map(el => el.id).indexOf(product.id);
 
       if(productIdx !== -1) {
         state.products[productIdx]['quantity']++;
@@ -20,7 +20,7 @@ export default new Vuex.Store({
       }
     },
     removeFromCart(state, args) {
-      let productIdx = state.products.map(el => el.title).indexOf(args[1]);
+      let productIdx = state.products.map(el => el.id).indexOf(args[1]);
       state.products[productIdx]['quantity'] = 1;
       state.products.splice(args[0], 1);
     },

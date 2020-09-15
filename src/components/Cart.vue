@@ -2,8 +2,8 @@
     <div class="cart-wrapper py-4" ref="cart">
         <img width="35" class="close-img" src="../assets/img/close.png" @click="closeCart">
         <div v-if="!checkoutPressed" ref="cartContent" class="cart-content">
-            <h1 v-if="products.length" :data-qty="products.length" class="text-center cart__heading">{{ $t('cart.cartEmpty') }}</h1>
-            <h1 v-else class="text-center cart__heading">{{ $t('cart.heading') }}</h1>
+            <h2 v-if="products.length" :data-qty="products.length" class="text-center cart__heading mb-4">{{ $t('cart.heading') }}</h2>
+            <h2 v-else class="text-center cart__heading mb-4">{{ $t('cart.cartEmpty') }}</h2>
             <div class="cart">
                 <div ref="cartItem" class="cart-item mx-auto" v-for="(product, idx) in products" :key="idx">
                     <div class="d-flex align-items-center justify-content-between mx-auto px-2 mb-1 w-100">
@@ -19,12 +19,12 @@
                                 <button class="btn p-0 cursor-pointer quantity-counter" @click="incrementQty(product.title)">+</button>
                             </div>
                         </div>
-                        <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.title)">
+                        <img class="cursor-pointer" src="../assets/img/close.png" width="20" height="20" @click="removeFromCart($event, idx, product.id)">
                     </div>
                     <p class="cart-item__title mb-3 px-2">{{product.title}}</p>
                 </div>
             </div>
-            <h2 v-if="products.length" class="text-center mb-2 total-price">{{ $t('cart.total') }}: <span id="total">{{totalSum}}</span> mdl</h2>
+            <h2 v-if="products.length" class="text-center mb-4 total-price">{{ $t('cart.total') }}<span id="total"> : {{totalSum}} mdl</span></h2>
             <button 
                 v-if="products.length" 
                 class="btn btn-secondary angle-right d-block mx-auto" 
@@ -60,11 +60,11 @@ export default {
         }
     },
     methods: {
-        removeFromCart(e, idx, title) {
+        removeFromCart(e, idx, id) {
             this.$refs.cartItem[idx].classList.add('removed');
             setTimeout(() => {
                 this.$refs.cartItem[idx].classList.remove('removed');
-                this.$store.dispatch('removeFromCart', [idx, title]);
+                this.$store.dispatch('removeFromCart', [idx, id]);
             }, 400);
         },
         closeCart() {
@@ -122,12 +122,11 @@ export default {
         transition: .25s all ease-in-out
         .cart__heading
             @media (max-width: 700px)
-                font-size: 5rem
                 max-width: 80%
                 margin: 0 auto
         .total-price
             @media (max-width: 700px)
-                font-size: 4rem
+                font-size: 2.5rem
         .cart-content
             transition: .5s all ease-in-out
         .quantity-counter

@@ -1,6 +1,6 @@
 <template>
-    <div class="faq container px-5 pb-5" id="contacts">
-        <h1 class="text-center mb-5 faq__heading mx-auto">{{ $t('faq.heading') }}</h1>
+    <div class="faq container px-md-5 px-xs-3 pb-5" id="contacts">
+        <h2 class="text-center mb-5 faq__heading mx-auto">{{ $t('faq.heading') }}</h2>
         <form action="mail.php" method="POST">
             <div class="faq__input">
                 <input type="tel" id="number-input" class="text-secondary" placeholder="+373 60 246 366">
@@ -32,8 +32,8 @@ export default {
     .faq
         &__heading
             max-width: 800px
-            @media (max-width: 1000px)
-                font-size: 4rem
+            // @media (max-width: 1000px)
+            //     font-size: 4rem
         &__input
             max-width: 1000px
             margin: 0 auto

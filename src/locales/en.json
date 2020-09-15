@@ -19,12 +19,119 @@
     "heading": "Desserts",
     "back": "Back"
   },
-  "categories": {
-    "cakes": "Cakes",
-    "cakesText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
-  },
+  "categories": [
+    {
+      "title": "Cakes",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    },
+    {
+      "title": "Bars",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    },
+    {
+      "title": "Ice-cream",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    },
+    {
+      "title": "Curds",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    },
+    {
+      "title": "Sweets",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    },
+    {
+      "title": "Sets",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore aliqua."
+    }
+  ],
+  "cakes": [
+    {
+      "title": "Cake1",
+      "text": "Super Cake"
+    },
+    {
+      "title": "Cake2",
+      "text": "Super Cake"
+    },
+    {
+      "title": "Cake3",
+      "text": "Super Cake"
+    },
+    {
+      "title": "Cake4",
+      "text": "Super Cake"
+    },
+    {
+      "title": "Cake5",
+      "text": "Super Cake"
+    },
+    {
+      "title": "Cake6",
+      "text": "Super Cake"
+    }
+  ],
+  "bars": [
+    {
+      "title": "Bar1",
+      "text": "Super bar"
+    },
+    {
+      "title": "Bar2",
+      "text": "Super bar"
+    },
+    {
+      "title": "Bar3",
+      "text": "Super bar"
+    },
+    {
+      "title": "Bar4",
+      "text": "Super bar"
+    }
+  ],
+  "ice_cream": [
+    {
+      "title": "Ice-cream1",
+      "text": "Super Ice cream"
+    },
+    {
+      "title": "Ice-cream2",
+      "text": "Super Ice cream"
+    },
+    {
+      "title": "Ice-cream3",
+      "text": "Super Ice cream"
+    }
+  ],
+  "curds": [
+    {
+      "title": "Curd1",
+      "text": "Super Curd"
+    }
+  ],
+  "sweets": [
+    {
+      "title": "Sweet1",
+      "text": "Super sweet"
+    },
+    {
+      "title": "Sweet2",
+      "text": "Super sweet"
+    }
+  ],
+  "sets": [
+    {
+      "title": "Set1",
+      "text": "Super set"
+    },
+    {
+      "title": "Set2",
+      "text": "Super set"
+    }
+  ],
   "gallery": {
-    "heading": "Gallery"
+    "heading": "Gallery",
+    "description": ["Super1", "Super2", "Super3", "Super4", "Super5", "Super6", "Super7", "Super8", "Super9", "Super10", "Super11", "Super12"]
   },
   "faq": {
     "heading": "Have Qestion in mind? Let us help you",

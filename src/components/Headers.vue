@@ -1,5 +1,5 @@
 <template>
-    <header id="home">
+    <header id="home" class="header">
         <div class="container">
             <Navbar />
             <div class="row align-items-center">
@@ -62,11 +62,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-header
+.header
     position: relative
     overflow: hidden
     min-height: 100vh
     padding-top: 100px
+    &__content
+        max-width: 500px
+        width: 100%
     @media (max-width: 1200px)
         background-image: url('../assets/img/header/cake.png')
         background-size: contain

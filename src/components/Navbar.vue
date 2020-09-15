@@ -118,6 +118,8 @@ export default {
     top: 0
     transition: .3s all ease-in-out
     left: 0
+    #nav-text-collapse
+        transition: .3s all
     @media (max-width: 1200px)
         background-color: rgba(0, 0, 0, .25)
     .navbar

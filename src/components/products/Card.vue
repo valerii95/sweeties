@@ -49,9 +49,7 @@ export default {
 
                 setTimeout(() => {
                     document.querySelector('#cart').classList.remove('animate');
-                }, 1050)
-
-                
+                }, 1050);
             }
         }
     }

@@ -11,6 +11,7 @@
 
             <b-navbar-brand>
                 <div class="navbar__logo">
+                    <LocaleSwitcher class="mobile-locale" />
                     <img @click="toggleIcons" class="img img-fluid" src="../assets/img/header/logo.png" alt />
                     <div class="header__social" ref="social">
                         <a href="https://www.instagram.com/sweeties_md/" target="_blank">
@@ -34,7 +35,7 @@
                         <img class="cart-img" src="../assets/img/cart.png" alt="cart">
                         <p class="text-white ml-2">{{cartLength}}</p>
                     </div>
-                    <LocaleSwitcher />
+                    <LocaleSwitcher class="desk-locale" />
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -109,6 +110,14 @@ export default {
 </script>
 
 <style lang="sass">
+.mobile-locale
+    display: none
+    @media (max-width: 767px)
+        display: block
+.desk-locale
+    display: none
+    @media (min-width: 768px)
+        display: block
 
 .navbar-wrapper
     font-family: "Montserrat"

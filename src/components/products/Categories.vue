@@ -237,6 +237,14 @@ export default {
                         price: 150,
                         quantity: 1,
                     },
+                    {
+                        img: require("../../assets/img/products/categories/curds.png"),
+                        title: this.$t("curds")[1].title,
+                        text: this.$t("curds")[1].text,
+                        id: "curds2",
+                        price: 150,
+                        quantity: 1,
+                    },
                 ],
                 sweets: [
                     {

@@ -97,13 +97,14 @@ export default {
 
 img.temp
     height: auto
-    width: 50px
+    width: 70px
 
 img.floating
     animation: fade-out-in-right .7s linear 0s 1 normal forwards
     position: absolute
     right: 50px
-    top: 6px
+    top: 0
+    border-radius: 40%
     @media (max-width: 767px)
         animation: fade-out-in-left .7s linear 0s 1 normal forwards
         right: -10px

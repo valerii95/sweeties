@@ -42,10 +42,10 @@
                                 <a class="link" href="mailto:buburuza@gmail.com">buburuza@gmail.com</a>
                             </li>
                             <li class="d-flex align-items-center">
-                                <a href="https://www.instagram.com/sweeties_md/" class="mr-2">
+                                <a target="_blank" href="https://www.instagram.com/sweeties_md/" class="mr-2">
                                     <img src="../assets/img/header/instagram.png" alt />
                                 </a>
-                                <a href="https://www.facebook.com/sweetiesmd/">
+                                <a target="_blank" href="https://www.facebook.com/sweetiesmd/">
                                     <img src="../assets/img/header/facebook.png" alt />
                                 </a>
                             </li>
